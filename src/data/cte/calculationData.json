@@ -1,0 +1,3530 @@
+{
+  "datasetVersion": "2026.11.1",
+  "surfaceResistances": {
+    "exteriorHorizontalFlow": {
+      "rse": 0.04,
+      "rsi": 0.13,
+      "label": "Cerramiento vertical o con pendiente > 60° y flujo horizontal",
+      "reference": "DA DB-HE/1 (enero 2020), tabla 1",
+      "validationStatus": "verified",
+      "verifiedOn": "2026-11-02"
+    },
+    "exteriorUpwardFlow": {
+      "rse": 0.04,
+      "rsi": 0.1,
+      "label": "Cerramiento horizontal o con pendiente ≤ 60° y flujo ascendente (techo)",
+      "reference": "DA DB-HE/1 (enero 2020), tabla 1",
+      "validationStatus": "verified",
+      "verifiedOn": "2026-11-02"
+    },
+    "exteriorDownwardFlow": {
+      "rse": 0.04,
+      "rsi": 0.17,
+      "label": "Cerramiento horizontal y flujo descendente (suelo)",
+      "reference": "DA DB-HE/1 (enero 2020), tabla 1",
+      "validationStatus": "verified",
+      "verifiedOn": "2026-11-02"
+    },
+    "partyWall": {
+      "rse": 0.13,
+      "rsi": 0.13,
+      "label": "Medianería: cerramiento vertical calculado con ambas resistencias superficiales interiores",
+      "reference": "DA DB-HE/1 (enero 2020), apartado 2.1.1 (medianerías) y tabla 1",
+      "validationStatus": "verified",
+      "verifiedOn": "2026-11-02"
+    },
+    "partitionHorizontalFlow": {
+      "rse": 0.13,
+      "rsi": 0.13,
+      "label": "Partición interior vertical o con pendiente > 60° y flujo horizontal",
+      "reference": "DA DB-HE/1 (enero 2020), tabla 6",
+      "validationStatus": "verified",
+      "verifiedOn": "2026-11-02"
+    },
+    "partitionUpwardFlow": {
+      "rse": 0.1,
+      "rsi": 0.1,
+      "label": "Partición interior horizontal o con pendiente ≤ 60° y flujo ascendente (techo)",
+      "reference": "DA DB-HE/1 (enero 2020), tabla 6",
+      "validationStatus": "verified",
+      "verifiedOn": "2026-11-02"
+    },
+    "partitionDownwardFlow": {
+      "rse": 0.17,
+      "rsi": 0.17,
+      "label": "Partición interior horizontal y flujo descendente (suelo)",
+      "reference": "DA DB-HE/1 (enero 2020), tabla 6",
+      "validationStatus": "verified",
+      "verifiedOn": "2026-11-02"
+    }
+  },
+  "unventilatedAirCavities": {
+    "reference": "DA DB-HE/1 (enero 2020), apartado 2.1.1 a) y tabla 2",
+    "validationStatus": "verified",
+    "interpolation": "linear",
+    "conditions": [
+      "Cámara limitada por dos superficies paralelas entre sí y perpendiculares al flujo de calor, con emisividades superiores a 0,8.",
+      "Espesor menor que 0,1 veces cada una de las otras dos dimensiones y no mayor que 0,3 m.",
+      "Sin intercambio de aire con el ambiente interior.",
+      "Sin ventilar: aberturas ≤ 500 mm² por m de longitud horizontal (cámaras verticales) o por m² de superficie (cámaras horizontales)."
+    ],
+    "columns": {
+      "vertical": "Cámara vertical (flujo de calor horizontal)",
+      "horizontal": "Cámara horizontal (flujo de calor ascendente)"
+    },
+    "points": [
+      {
+        "thicknessMm": 10,
+        "horizontal": 0.15,
+        "vertical": 0.15
+      },
+      {
+        "thicknessMm": 20,
+        "horizontal": 0.16,
+        "vertical": 0.17
+      },
+      {
+        "thicknessMm": 50,
+        "horizontal": 0.16,
+        "vertical": 0.18
+      }
+    ],
+    "slightlyVentilatedFactor": 0.5,
+    "slightlyVentilatedRule": "Cámara ligeramente ventilada (500 mm² < aberturas ≤ 1500 mm²): la mitad de los valores de la tabla 2.",
+    "veryVentilatedRule": "Cámara muy ventilada (aberturas > 1500 mm²): se desprecian la cámara y las capas entre la cámara y el exterior, y la resistencia superficial exterior se toma igual a la interior del mismo elemento.",
+    "assumptionNote": "Se interpreta la columna «horizontal» de la tabla 2 como cámara horizontal con flujo ascendente y la columna «vertical» como cámara vertical con flujo horizontal, de forma coherente con la UNE-EN ISO 6946. La tabla 2 no da valores para flujo descendente, por lo que ese caso no se calcula.",
+    "verifiedOn": "2026-11-02"
+  },
+  "groundAndUnheated": {
+    "tables": {
+      "T3": {
+        "id": "DA-HE1-T3",
+        "reference": "DA DB-HE/1 (enero 2020), tabla 3 «Transmitancia térmica Us de soleras (caso 1)»",
+        "validationStatus": "verified",
+        "note": "Cotejada celda a celda con el PDF oficial del DA DB-HE/1 (enero 2020), pág. 6, el 2 de noviembre de 2026.",
+        "bPrime": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          12,
+          14,
+          16,
+          18,
+          20
+        ],
+        "ra": [
+          0,
+          0.5,
+          1.0,
+          1.5,
+          2.0,
+          2.5
+        ],
+        "byBandWidth": [
+          {
+            "d": 0.5,
+            "values": [
+              [
+                2.35,
+                1.57,
+                1.3,
+                1.16,
+                1.07,
+                1.01
+              ],
+              [
+                1.56,
+                1.17,
+                1.04,
+                0.97,
+                0.92,
+                0.89
+              ],
+              [
+                1.2,
+                0.94,
+                0.85,
+                0.8,
+                0.78,
+                0.76
+              ],
+              [
+                0.99,
+                0.79,
+                0.73,
+                0.69,
+                0.67,
+                0.65
+              ],
+              [
+                0.85,
+                0.69,
+                0.64,
+                0.61,
+                0.59,
+                0.58
+              ],
+              [
+                0.74,
+                0.61,
+                0.57,
+                0.54,
+                0.53,
+                0.52
+              ],
+              [
+                0.66,
+                0.55,
+                0.51,
+                0.49,
+                0.48,
+                0.47
+              ],
+              [
+                0.6,
+                0.5,
+                0.47,
+                0.45,
+                0.44,
+                0.43
+              ],
+              [
+                0.55,
+                0.46,
+                0.43,
+                0.42,
+                0.41,
+                0.4
+              ],
+              [
+                0.51,
+                0.43,
+                0.4,
+                0.39,
+                0.38,
+                0.37
+              ],
+              [
+                0.44,
+                0.38,
+                0.36,
+                0.34,
+                0.34,
+                0.33
+              ],
+              [
+                0.39,
+                0.34,
+                0.32,
+                0.31,
+                0.3,
+                0.3
+              ],
+              [
+                0.35,
+                0.31,
+                0.29,
+                0.28,
+                0.27,
+                0.27
+              ],
+              [
+                0.32,
+                0.28,
+                0.27,
+                0.26,
+                0.25,
+                0.25
+              ],
+              [
+                0.3,
+                0.26,
+                0.25,
+                0.24,
+                0.23,
+                0.23
+              ]
+            ]
+          },
+          {
+            "d": 1.0,
+            "values": [
+              [
+                2.35,
+                1.39,
+                1.01,
+                0.8,
+                0.66,
+                0.57
+              ],
+              [
+                1.56,
+                1.08,
+                0.89,
+                0.79,
+                0.72,
+                0.67
+              ],
+              [
+                1.2,
+                0.88,
+                0.76,
+                0.69,
+                0.64,
+                0.61
+              ],
+              [
+                0.99,
+                0.75,
+                0.65,
+                0.6,
+                0.57,
+                0.54
+              ],
+              [
+                0.85,
+                0.65,
+                0.58,
+                0.54,
+                0.51,
+                0.49
+              ],
+              [
+                0.74,
+                0.58,
+                0.52,
+                0.48,
+                0.46,
+                0.44
+              ],
+              [
+                0.66,
+                0.53,
+                0.47,
+                0.44,
+                0.42,
+                0.41
+              ],
+              [
+                0.6,
+                0.48,
+                0.43,
+                0.41,
+                0.39,
+                0.38
+              ],
+              [
+                0.55,
+                0.44,
+                0.4,
+                0.38,
+                0.36,
+                0.35
+              ],
+              [
+                0.51,
+                0.41,
+                0.37,
+                0.35,
+                0.34,
+                0.33
+              ],
+              [
+                0.44,
+                0.36,
+                0.33,
+                0.31,
+                0.3,
+                0.29
+              ],
+              [
+                0.39,
+                0.32,
+                0.3,
+                0.28,
+                0.27,
+                0.27
+              ],
+              [
+                0.35,
+                0.29,
+                0.27,
+                0.26,
+                0.25,
+                0.24
+              ],
+              [
+                0.32,
+                0.27,
+                0.25,
+                0.24,
+                0.23,
+                0.22
+              ],
+              [
+                0.3,
+                0.25,
+                0.23,
+                0.22,
+                0.21,
+                0.21
+              ]
+            ]
+          },
+          {
+            "d": 1.5,
+            "values": [
+              [
+                2.35,
+                null,
+                null,
+                null,
+                null,
+                null
+              ],
+              [
+                1.56,
+                1.04,
+                0.83,
+                0.7,
+                0.61,
+                0.55
+              ],
+              [
+                1.2,
+                0.85,
+                0.71,
+                0.63,
+                0.57,
+                0.53
+              ],
+              [
+                0.99,
+                0.73,
+                0.62,
+                0.56,
+                0.51,
+                0.48
+              ],
+              [
+                0.85,
+                0.64,
+                0.55,
+                0.5,
+                0.47,
+                0.44
+              ],
+              [
+                0.74,
+                0.57,
+                0.5,
+                0.45,
+                0.43,
+                0.41
+              ],
+              [
+                0.66,
+                0.51,
+                0.45,
+                0.42,
+                0.39,
+                0.37
+              ],
+              [
+                0.6,
+                0.47,
+                0.42,
+                0.38,
+                0.36,
+                0.35
+              ],
+              [
+                0.55,
+                0.43,
+                0.39,
+                0.36,
+                0.34,
+                0.33
+              ],
+              [
+                0.51,
+                0.4,
+                0.36,
+                0.34,
+                0.32,
+                0.31
+              ],
+              [
+                0.44,
+                0.36,
+                0.32,
+                0.3,
+                0.28,
+                0.27
+              ],
+              [
+                0.39,
+                0.32,
+                0.29,
+                0.27,
+                0.26,
+                0.25
+              ],
+              [
+                0.35,
+                0.29,
+                0.26,
+                0.25,
+                0.24,
+                0.23
+              ],
+              [
+                0.32,
+                0.27,
+                0.24,
+                0.23,
+                0.22,
+                0.21
+              ],
+              [
+                0.3,
+                0.25,
+                0.22,
+                0.21,
+                0.2,
+                0.2
+              ]
+            ]
+          }
+        ],
+        "notes": [
+          "La columna Ra = 0 (sin aislamiento) es común a todos los anchos D.",
+          "Aislamiento en toda la superficie: columnas D ≥ 1,5 m.",
+          "La transmitancia del primer metro de solera se obtiene de la fila B' = 1.",
+          "Interpolación lineal de valores intermedios."
+        ],
+        "verifiedOn": "2026-11-02",
+        "verifiedAgainst": "https://www.codigotecnico.org/pdf/Documentos/HE/DA_DB-HE-1_Calculo_de_parametros_caracteristicos_de_la_envolvente.pdf",
+        "page": 6
+      },
+      "T4": {
+        "id": "DA-HE1-T4",
+        "reference": "DA DB-HE/1 (enero 2020), tabla 4 «Transmitancia térmica Us de soleras (caso 2)»",
+        "validationStatus": "verified",
+        "note": "Cotejada celda a celda con el PDF oficial del DA DB-HE/1 (enero 2020), pág. 7, el 2 de noviembre de 2026.",
+        "bPrime": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          12,
+          14,
+          16,
+          18,
+          20
+        ],
+        "rf": [
+          0,
+          0.5,
+          1.0,
+          1.5
+        ],
+        "depthBands": [
+          {
+            "label": "0,5 < z ≤ 1,0 m",
+            "minExclusive": 0.5,
+            "max": 1.0,
+            "values": [
+              [
+                1.51,
+                1.07,
+                0.84,
+                0.69
+              ],
+              [
+                1.09,
+                0.82,
+                0.67,
+                0.57
+              ],
+              [
+                0.87,
+                0.68,
+                0.57,
+                0.49
+              ],
+              [
+                0.74,
+                0.59,
+                0.49,
+                0.43
+              ],
+              [
+                0.64,
+                0.52,
+                0.44,
+                0.39
+              ],
+              [
+                0.57,
+                0.46,
+                0.4,
+                0.35
+              ],
+              [
+                0.52,
+                0.42,
+                0.37,
+                0.33
+              ],
+              [
+                0.47,
+                0.39,
+                0.34,
+                0.3
+              ],
+              [
+                0.43,
+                0.36,
+                0.32,
+                0.28
+              ],
+              [
+                0.4,
+                0.34,
+                0.3,
+                0.27
+              ],
+              [
+                0.36,
+                0.3,
+                0.27,
+                0.24
+              ],
+              [
+                0.32,
+                0.27,
+                0.24,
+                0.22
+              ],
+              [
+                0.29,
+                0.25,
+                0.22,
+                0.2
+              ],
+              [
+                0.26,
+                0.23,
+                0.2,
+                0.19
+              ],
+              [
+                0.24,
+                0.21,
+                0.19,
+                0.17
+              ]
+            ]
+          },
+          {
+            "label": "1,0 < z ≤ 2,0 m",
+            "minExclusive": 1.0,
+            "max": 2.0,
+            "values": [
+              [
+                1.14,
+                0.88,
+                0.72,
+                0.61
+              ],
+              [
+                0.87,
+                0.7,
+                0.59,
+                0.51
+              ],
+              [
+                0.71,
+                0.59,
+                0.5,
+                0.44
+              ],
+              [
+                0.61,
+                0.51,
+                0.44,
+                0.39
+              ],
+              [
+                0.54,
+                0.45,
+                0.4,
+                0.36
+              ],
+              [
+                0.48,
+                0.41,
+                0.36,
+                0.33
+              ],
+              [
+                0.44,
+                0.38,
+                0.33,
+                0.3
+              ],
+              [
+                0.4,
+                0.35,
+                0.31,
+                0.28
+              ],
+              [
+                0.37,
+                0.32,
+                0.29,
+                0.26
+              ],
+              [
+                0.35,
+                0.3,
+                0.27,
+                0.25
+              ],
+              [
+                0.31,
+                0.27,
+                0.24,
+                0.22
+              ],
+              [
+                0.28,
+                0.25,
+                0.22,
+                0.2
+              ],
+              [
+                0.25,
+                0.23,
+                0.2,
+                0.19
+              ],
+              [
+                0.23,
+                0.21,
+                0.19,
+                0.18
+              ],
+              [
+                0.22,
+                0.19,
+                0.18,
+                0.16
+              ]
+            ]
+          },
+          {
+            "label": "2,0 < z ≤ 3,0 m",
+            "minExclusive": 2.0,
+            "max": 3.0,
+            "values": [
+              [
+                0.78,
+                0.65,
+                0.56,
+                0.49
+              ],
+              [
+                0.63,
+                0.54,
+                0.47,
+                0.42
+              ],
+              [
+                0.53,
+                0.47,
+                0.41,
+                0.37
+              ],
+              [
+                0.47,
+                0.41,
+                0.37,
+                0.34
+              ],
+              [
+                0.42,
+                0.37,
+                0.34,
+                0.31
+              ],
+              [
+                0.38,
+                0.34,
+                0.31,
+                0.28
+              ],
+              [
+                0.35,
+                0.31,
+                0.29,
+                0.26
+              ],
+              [
+                0.33,
+                0.29,
+                0.27,
+                0.25
+              ],
+              [
+                0.3,
+                0.27,
+                0.25,
+                0.23
+              ],
+              [
+                0.29,
+                0.26,
+                0.24,
+                0.22
+              ],
+              [
+                0.26,
+                0.23,
+                0.21,
+                0.2
+              ],
+              [
+                0.23,
+                0.21,
+                0.2,
+                0.18
+              ],
+              [
+                0.21,
+                0.2,
+                0.18,
+                0.17
+              ],
+              [
+                0.2,
+                0.18,
+                0.17,
+                0.16
+              ],
+              [
+                0.18,
+                0.17,
+                0.16,
+                0.15
+              ]
+            ]
+          },
+          {
+            "label": "z > 3,0 m",
+            "minExclusive": 3.0,
+            "max": null,
+            "values": [
+              [
+                0.59,
+                0.51,
+                0.46,
+                0.41
+              ],
+              [
+                0.5,
+                0.44,
+                0.4,
+                0.36
+              ],
+              [
+                0.43,
+                0.39,
+                0.35,
+                0.32
+              ],
+              [
+                0.39,
+                0.35,
+                0.32,
+                0.29
+              ],
+              [
+                0.35,
+                0.32,
+                0.29,
+                0.27
+              ],
+              [
+                0.32,
+                0.29,
+                0.27,
+                0.25
+              ],
+              [
+                0.3,
+                0.27,
+                0.25,
+                0.24
+              ],
+              [
+                0.28,
+                0.26,
+                0.24,
+                0.22
+              ],
+              [
+                0.26,
+                0.24,
+                0.22,
+                0.21
+              ],
+              [
+                0.25,
+                0.23,
+                0.21,
+                0.2
+              ],
+              [
+                0.22,
+                0.21,
+                0.19,
+                0.18
+              ],
+              [
+                0.2,
+                0.19,
+                0.18,
+                0.17
+              ],
+              [
+                0.19,
+                0.17,
+                0.16,
+                0.16
+              ],
+              [
+                0.17,
+                0.16,
+                0.15,
+                0.15
+              ],
+              [
+                0.16,
+                0.15,
+                0.14,
+                0.14
+              ]
+            ]
+          }
+        ],
+        "verifiedOn": "2026-11-02",
+        "verifiedAgainst": "https://www.codigotecnico.org/pdf/Documentos/HE/DA_DB-HE-1_Calculo_de_parametros_caracteristicos_de_la_envolvente.pdf",
+        "page": 7
+      },
+      "T5": {
+        "id": "DA-HE1-T5",
+        "reference": "DA DB-HE/1 (enero 2020), tabla 5 «Transmitancia térmica UT de muros enterrados»",
+        "validationStatus": "verified",
+        "note": "Cotejada celda a celda con el PDF oficial del DA DB-HE/1 (enero 2020), pág. 8, el 2 de noviembre de 2026.",
+        "rm": [
+          0.0,
+          0.1,
+          0.2,
+          0.3,
+          0.4,
+          0.5,
+          0.6,
+          0.7,
+          0.8,
+          0.9,
+          1.0,
+          1.1,
+          1.2,
+          1.3,
+          1.4,
+          1.5,
+          1.6,
+          1.7,
+          1.8,
+          1.9,
+          2.0
+        ],
+        "z": [
+          0.5,
+          1,
+          2,
+          3,
+          4,
+          6
+        ],
+        "values": [
+          [
+            3.05,
+            2.2,
+            1.48,
+            1.15,
+            0.95,
+            0.71
+          ],
+          [
+            2.29,
+            1.74,
+            1.22,
+            0.97,
+            0.81,
+            0.62
+          ],
+          [
+            1.84,
+            1.45,
+            1.06,
+            0.85,
+            0.72,
+            0.56
+          ],
+          [
+            1.55,
+            1.25,
+            0.93,
+            0.76,
+            0.65,
+            0.51
+          ],
+          [
+            1.33,
+            1.1,
+            0.84,
+            0.69,
+            0.6,
+            0.47
+          ],
+          [
+            1.17,
+            0.99,
+            0.77,
+            0.64,
+            0.55,
+            0.44
+          ],
+          [
+            1.05,
+            0.9,
+            0.71,
+            0.59,
+            0.52,
+            0.42
+          ],
+          [
+            0.95,
+            0.82,
+            0.66,
+            0.56,
+            0.49,
+            0.39
+          ],
+          [
+            0.87,
+            0.76,
+            0.61,
+            0.52,
+            0.46,
+            0.38
+          ],
+          [
+            0.8,
+            0.7,
+            0.58,
+            0.49,
+            0.44,
+            0.36
+          ],
+          [
+            0.74,
+            0.65,
+            0.54,
+            0.47,
+            0.42,
+            0.34
+          ],
+          [
+            0.69,
+            0.61,
+            0.51,
+            0.45,
+            0.4,
+            0.33
+          ],
+          [
+            0.64,
+            0.58,
+            0.49,
+            0.42,
+            0.38,
+            0.32
+          ],
+          [
+            0.6,
+            0.55,
+            0.46,
+            0.41,
+            0.36,
+            0.3
+          ],
+          [
+            0.57,
+            0.52,
+            0.44,
+            0.39,
+            0.35,
+            0.29
+          ],
+          [
+            0.54,
+            0.49,
+            0.42,
+            0.37,
+            0.34,
+            0.28
+          ],
+          [
+            0.51,
+            0.47,
+            0.4,
+            0.36,
+            0.32,
+            0.28
+          ],
+          [
+            0.49,
+            0.45,
+            0.39,
+            0.35,
+            0.31,
+            0.27
+          ],
+          [
+            0.46,
+            0.43,
+            0.37,
+            0.33,
+            0.3,
+            0.26
+          ],
+          [
+            0.44,
+            0.41,
+            0.36,
+            0.32,
+            0.29,
+            0.25
+          ],
+          [
+            0.42,
+            0.39,
+            0.35,
+            0.31,
+            0.28,
+            0.24
+          ]
+        ],
+        "verifiedOn": "2026-11-02",
+        "verifiedAgainst": "https://www.codigotecnico.org/pdf/Documentos/HE/DA_DB-HE-1_Calculo_de_parametros_caracteristicos_de_la_envolvente.pdf",
+        "page": 8
+      },
+      "T7": {
+        "id": "DA-HE1-T7",
+        "reference": "DA DB-HE/1 (enero 2020), tabla 7 «Coeficiente de reducción de temperatura b»",
+        "validationStatus": "verified",
+        "note": "Cotejada celda a celda con el PDF oficial del DA DB-HE/1 (enero 2020), pág. 10, el 2 de noviembre de 2026.",
+        "ratioRows": [
+          {
+            "label": "< 0,25",
+            "max": 0.25
+          },
+          {
+            "label": "0,25–0,50",
+            "max": 0.5
+          },
+          {
+            "label": "0,50–0,75",
+            "max": 0.75
+          },
+          {
+            "label": "0,75–1,00",
+            "max": 1.0
+          },
+          {
+            "label": "1,00–1,25",
+            "max": 1.25
+          },
+          {
+            "label": "1,25–2,00",
+            "max": 2.0
+          },
+          {
+            "label": "2,00–2,50",
+            "max": 2.5
+          },
+          {
+            "label": "2,50–3,00",
+            "max": 3.0
+          },
+          {
+            "label": "> 3,00",
+            "max": null
+          }
+        ],
+        "groups": [
+          {
+            "id": "nhe-no_hnh-yes",
+            "label": "Cerramiento nh-e no aislado y partición h-nh aislada",
+            "values": [
+              [
+                0.99,
+                1.0
+              ],
+              [
+                0.97,
+                0.99
+              ],
+              [
+                0.96,
+                0.98
+              ],
+              [
+                0.94,
+                0.97
+              ],
+              [
+                0.92,
+                0.96
+              ],
+              [
+                0.89,
+                0.95
+              ],
+              [
+                0.86,
+                0.93
+              ],
+              [
+                0.83,
+                0.91
+              ],
+              [
+                0.81,
+                0.9
+              ]
+            ]
+          },
+          {
+            "id": "nhe-no_hnh-no",
+            "label": "Cerramiento nh-e no aislado y partición h-nh no aislada",
+            "values": [
+              [
+                0.94,
+                0.97
+              ],
+              [
+                0.85,
+                0.92
+              ],
+              [
+                0.77,
+                0.87
+              ],
+              [
+                0.7,
+                0.83
+              ],
+              [
+                0.65,
+                0.79
+              ],
+              [
+                0.56,
+                0.73
+              ],
+              [
+                0.48,
+                0.66
+              ],
+              [
+                0.43,
+                0.61
+              ],
+              [
+                0.39,
+                0.57
+              ]
+            ]
+          },
+          {
+            "id": "nhe-yes_hnh-no",
+            "label": "Cerramiento nh-e aislado y partición h-nh no aislada",
+            "values": [
+              [
+                0.91,
+                0.96
+              ],
+              [
+                0.77,
+                0.9
+              ],
+              [
+                0.67,
+                0.84
+              ],
+              [
+                0.59,
+                0.79
+              ],
+              [
+                0.53,
+                0.74
+              ],
+              [
+                0.44,
+                0.67
+              ],
+              [
+                0.36,
+                0.59
+              ],
+              [
+                0.32,
+                0.54
+              ],
+              [
+                0.28,
+                0.5
+              ]
+            ]
+          }
+        ],
+        "cases": {
+          "1": "Caso 1: espacio ligeramente ventilado (niveles de estanqueidad 1, 2 o 3)",
+          "2": "Caso 2: espacio muy ventilado (niveles de estanqueidad 4 o 5)"
+        },
+        "verifiedOn": "2026-11-02",
+        "verifiedAgainst": "https://www.codigotecnico.org/pdf/Documentos/HE/DA_DB-HE-1_Calculo_de_parametros_caracteristicos_de_la_envolvente.pdf",
+        "page": 10
+      },
+      "T8": {
+        "id": "DA-HE1-T8",
+        "reference": "DA DB-HE/1 (enero 2020), tabla 8 «Tasa de renovación de aire entre espacios no habitables y el exterior»",
+        "validationStatus": "verified",
+        "levels": [
+          {
+            "level": 1,
+            "label": "Ni puertas, ni ventanas, ni aberturas de ventilación",
+            "ach": 0
+          },
+          {
+            "level": 2,
+            "label": "Todos los componentes sellados, sin aberturas de ventilación",
+            "ach": 0.5
+          },
+          {
+            "level": 3,
+            "label": "Todos los componentes bien sellados, pequeñas aberturas de ventilación",
+            "ach": 1
+          },
+          {
+            "level": 4,
+            "label": "Poco estanco: juntas abiertas o aberturas de ventilación permanentes",
+            "ach": 5
+          },
+          {
+            "level": 5,
+            "label": "Poco estanco: numerosas juntas abiertas o aberturas de ventilación permanentes grandes o numerosas",
+            "ach": 10
+          }
+        ],
+        "verifiedOn": "2026-11-02",
+        "verifiedAgainst": "https://www.codigotecnico.org/pdf/Documentos/HE/DA_DB-HE-1_Calculo_de_parametros_caracteristicos_de_la_envolvente.pdf",
+        "page": 11,
+        "note": "Cotejada celda a celda con el PDF oficial del DA DB-HE/1 (enero 2020), pág. 11, el 2 de noviembre de 2026."
+      },
+      "T9": {
+        "id": "DA-HE1-T9",
+        "reference": "DA DB-HE/1 (enero 2020), tabla 9 «Transmitancia térmica Us de suelos en contacto con cámaras sanitarias»",
+        "validationStatus": "verified",
+        "note": "Cotejada celda a celda con el PDF oficial del DA DB-HE/1 (enero 2020), pág. 12, el 2 de noviembre de 2026.",
+        "bPrime": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          12,
+          14,
+          16,
+          18,
+          20,
+          22,
+          24,
+          26,
+          28,
+          30,
+          32,
+          34,
+          36
+        ],
+        "rf": [
+          0,
+          0.5,
+          1.0,
+          1.5,
+          2.0,
+          2.5,
+          3.0
+        ],
+        "values": [
+          [
+            9.38,
+            1.65,
+            0.9,
+            0.62,
+            0.47,
+            0.38,
+            0.29
+          ],
+          [
+            5.35,
+            1.46,
+            0.84,
+            0.59,
+            0.46,
+            0.37,
+            0.28
+          ],
+          [
+            3.88,
+            1.32,
+            0.8,
+            0.57,
+            0.44,
+            0.36,
+            0.28
+          ],
+          [
+            3.11,
+            1.22,
+            0.76,
+            0.55,
+            0.43,
+            0.35,
+            0.27
+          ],
+          [
+            2.63,
+            1.14,
+            0.72,
+            0.53,
+            0.42,
+            0.35,
+            0.27
+          ],
+          [
+            2.3,
+            1.07,
+            0.7,
+            0.52,
+            0.41,
+            0.34,
+            0.27
+          ],
+          [
+            2.06,
+            1.01,
+            0.67,
+            0.5,
+            0.4,
+            0.33,
+            0.26
+          ],
+          [
+            1.87,
+            0.97,
+            0.65,
+            0.49,
+            0.39,
+            0.33,
+            0.26
+          ],
+          [
+            1.73,
+            0.93,
+            0.63,
+            0.48,
+            0.39,
+            0.32,
+            0.26
+          ],
+          [
+            1.61,
+            0.89,
+            0.62,
+            0.47,
+            0.38,
+            0.32,
+            0.26
+          ],
+          [
+            1.43,
+            0.83,
+            0.59,
+            0.45,
+            0.37,
+            0.31,
+            0.25
+          ],
+          [
+            1.3,
+            0.79,
+            0.57,
+            0.44,
+            0.36,
+            0.31,
+            0.25
+          ],
+          [
+            1.2,
+            0.75,
+            0.55,
+            0.43,
+            0.35,
+            0.3,
+            0.25
+          ],
+          [
+            1.12,
+            0.72,
+            0.53,
+            0.42,
+            0.35,
+            0.29,
+            0.25
+          ],
+          [
+            1.06,
+            0.69,
+            0.51,
+            0.41,
+            0.34,
+            0.29,
+            0.25
+          ],
+          [
+            1.0,
+            0.67,
+            0.5,
+            0.4,
+            0.33,
+            0.29,
+            0.25
+          ],
+          [
+            0.96,
+            0.65,
+            0.49,
+            0.39,
+            0.33,
+            0.28,
+            0.24
+          ],
+          [
+            0.92,
+            0.63,
+            0.48,
+            0.39,
+            0.32,
+            0.28,
+            0.24
+          ],
+          [
+            0.89,
+            0.61,
+            0.47,
+            0.38,
+            0.32,
+            0.28,
+            0.24
+          ],
+          [
+            0.86,
+            0.6,
+            0.46,
+            0.38,
+            0.32,
+            0.27,
+            0.24
+          ],
+          [
+            0.83,
+            0.59,
+            0.45,
+            0.37,
+            0.31,
+            0.27,
+            0.23
+          ],
+          [
+            0.81,
+            0.58,
+            0.45,
+            0.37,
+            0.31,
+            0.27,
+            0.23
+          ],
+          [
+            0.79,
+            0.57,
+            0.44,
+            0.36,
+            0.31,
+            0.27,
+            0.23
+          ]
+        ],
+        "conditions": [
+          "Cámara sanitaria ventilada por el exterior.",
+          "Altura de la cámara h ≤ 1 m.",
+          "Profundidad del suelo respecto al terreno exterior z ≤ 0,5 m."
+        ],
+        "verifiedOn": "2026-11-02",
+        "verifiedAgainst": "https://www.codigotecnico.org/pdf/Documentos/HE/DA_DB-HE-1_Calculo_de_parametros_caracteristicos_de_la_envolvente.pdf",
+        "page": 12
+      }
+    },
+    "soilConductivity": 2.0,
+    "soilReference": "DA DB-HE/1 (enero 2020), apartado 2.1.2.3: el terreno se considera una capa homogénea más de conductividad λ = 2 W/(m·K)."
+  },
+  "condensation": {
+    "reference": "DA DB-HE/2 «Comprobación de limitación de condensaciones superficiales e intersticiales en los cerramientos» (octubre 2013)",
+    "sourceUrl": "https://www.codigotecnico.org/pdf/Documentos/HE/DA-DB-HE-2_-_Condensaciones.pdf",
+    "validationStatus": "verified",
+    "note": "Expresiones 3, 4 y 9, condiciones interiores (apartado 2.2), tabla 1 (pág. 5) y tabla C.1 (págs. 12–13) cotejadas con el PDF oficial del DA DB-HE/2 (octubre 2013) el 2 de noviembre de 2026.",
+    "interiorTemperature": 20,
+    "hygrometryClasses": [
+      {
+        "id": "3",
+        "label": "Clase 3 o inferior: viviendas, oficinas, comercios, almacenes",
+        "phiI": 0.55
+      },
+      {
+        "id": "4",
+        "label": "Clase 4: cocinas, pabellones deportivos, duchas colectivas",
+        "phiI": 0.62
+      },
+      {
+        "id": "5",
+        "label": "Clase 5: lavanderías, restaurantes, piscinas",
+        "phiI": 0.7
+      }
+    ],
+    "fRsiMin": {
+      "reference": "DA DB-HE/2, tabla 1 «Factor de temperatura de la superficie interior mínimo fRsi,min»",
+      "values": {
+        "5": {
+          "alpha": 0.7,
+          "A": 0.8,
+          "B": 0.8,
+          "C": 0.8,
+          "D": 0.9,
+          "E": 0.9
+        },
+        "4": {
+          "alpha": 0.56,
+          "A": 0.66,
+          "B": 0.66,
+          "C": 0.69,
+          "D": 0.75,
+          "E": 0.78
+        },
+        "3": {
+          "alpha": 0.42,
+          "A": 0.5,
+          "B": 0.52,
+          "C": 0.56,
+          "D": 0.61,
+          "E": 0.64
+        }
+      },
+      "page": 5
+    },
+    "fRsiFormula": "fRsi = 1 − 0,25 · U (DA DB-HE/2, expresión 9)",
+    "saturation": {
+      "aboveZero": {
+        "a": 17.269,
+        "b": 237.3
+      },
+      "belowZero": {
+        "a": 21.875,
+        "b": 265.5
+      },
+      "p0": 610.5
+    },
+    "altitudeLapseCPer100m": 1.0,
+    "januaryClimate": {
+      "reference": "DA DB-HE/2, apéndice C, tabla C.1: temperatura media θe y humedad relativa media φe mensuales de las capitales de provincia (se usa enero; se guardan los 12 meses)",
+      "byIneCode": {
+        "02": {
+          "capital": "Albacete",
+          "thetaE": 5.0,
+          "phiE": 0.78,
+          "monthly": {
+            "thetaE": [
+              5.0,
+              6.3,
+              8.5,
+              10.9,
+              15.3,
+              20.0,
+              24.0,
+              23.7,
+              20.0,
+              14.1,
+              8.5,
+              5.3
+            ],
+            "phiE": [
+              0.78,
+              0.7,
+              0.62,
+              0.6,
+              0.54,
+              0.5,
+              0.44,
+              0.5,
+              0.58,
+              0.7,
+              0.77,
+              0.79
+            ]
+          }
+        },
+        "03": {
+          "capital": "Alicante",
+          "thetaE": 11.6,
+          "phiE": 0.67,
+          "monthly": {
+            "thetaE": [
+              11.6,
+              12.4,
+              13.8,
+              15.7,
+              18.6,
+              22.2,
+              25.0,
+              25.5,
+              23.2,
+              19.1,
+              15.0,
+              12.1
+            ],
+            "phiE": [
+              0.67,
+              0.65,
+              0.63,
+              0.65,
+              0.65,
+              0.65,
+              0.64,
+              0.68,
+              0.69,
+              0.7,
+              0.69,
+              0.68
+            ]
+          }
+        },
+        "04": {
+          "capital": "Almería",
+          "thetaE": 12.4,
+          "phiE": 0.7,
+          "monthly": {
+            "thetaE": [
+              12.4,
+              13.0,
+              14.4,
+              16.1,
+              18.7,
+              22.3,
+              25.5,
+              26.0,
+              24.1,
+              20.1,
+              16.2,
+              13.3
+            ],
+            "phiE": [
+              0.7,
+              0.68,
+              0.66,
+              0.65,
+              0.67,
+              0.65,
+              0.64,
+              0.66,
+              0.66,
+              0.69,
+              0.7,
+              0.69
+            ]
+          }
+        },
+        "05": {
+          "capital": "Ávila",
+          "thetaE": 3.1,
+          "phiE": 0.75,
+          "monthly": {
+            "thetaE": [
+              3.1,
+              4.0,
+              5.6,
+              7.6,
+              11.5,
+              16.0,
+              19.9,
+              19.4,
+              16.5,
+              11.2,
+              6.0,
+              3.4
+            ],
+            "phiE": [
+              0.75,
+              0.7,
+              0.62,
+              0.61,
+              0.55,
+              0.5,
+              0.39,
+              0.4,
+              0.5,
+              0.65,
+              0.73,
+              0.77
+            ]
+          }
+        },
+        "06": {
+          "capital": "Badajoz",
+          "thetaE": 8.7,
+          "phiE": 0.8,
+          "monthly": {
+            "thetaE": [
+              8.7,
+              10.1,
+              12.0,
+              14.2,
+              17.9,
+              22.3,
+              25.3,
+              25.0,
+              22.6,
+              17.4,
+              12.1,
+              9.0
+            ],
+            "phiE": [
+              0.8,
+              0.76,
+              0.69,
+              0.66,
+              0.6,
+              0.55,
+              0.5,
+              0.5,
+              0.57,
+              0.68,
+              0.77,
+              0.82
+            ]
+          }
+        },
+        "08": {
+          "capital": "Barcelona",
+          "thetaE": 8.8,
+          "phiE": 0.73,
+          "monthly": {
+            "thetaE": [
+              8.8,
+              9.5,
+              11.1,
+              12.8,
+              16.0,
+              19.7,
+              22.9,
+              23.0,
+              21.0,
+              17.1,
+              12.5,
+              9.6
+            ],
+            "phiE": [
+              0.73,
+              0.7,
+              0.7,
+              0.7,
+              0.72,
+              0.7,
+              0.69,
+              0.72,
+              0.74,
+              0.74,
+              0.74,
+              0.71
+            ]
+          }
+        },
+        "48": {
+          "capital": "Bilbao",
+          "thetaE": 8.9,
+          "phiE": 0.73,
+          "monthly": {
+            "thetaE": [
+              8.9,
+              9.6,
+              10.4,
+              11.8,
+              14.6,
+              17.4,
+              19.7,
+              19.8,
+              18.8,
+              16.0,
+              11.8,
+              9.5
+            ],
+            "phiE": [
+              0.73,
+              0.7,
+              0.7,
+              0.72,
+              0.71,
+              0.72,
+              0.73,
+              0.75,
+              0.74,
+              0.74,
+              0.74,
+              0.74
+            ]
+          }
+        },
+        "09": {
+          "capital": "Burgos",
+          "thetaE": 2.6,
+          "phiE": 0.86,
+          "monthly": {
+            "thetaE": [
+              2.6,
+              3.9,
+              5.7,
+              7.6,
+              11.2,
+              15.0,
+              18.4,
+              18.3,
+              15.8,
+              11.1,
+              5.8,
+              3.2
+            ],
+            "phiE": [
+              0.86,
+              0.8,
+              0.73,
+              0.72,
+              0.69,
+              0.67,
+              0.61,
+              0.62,
+              0.67,
+              0.76,
+              0.83,
+              0.86
+            ]
+          }
+        },
+        "10": {
+          "capital": "Cáceres",
+          "thetaE": 7.8,
+          "phiE": 0.78,
+          "monthly": {
+            "thetaE": [
+              7.8,
+              9.3,
+              11.7,
+              13.0,
+              16.6,
+              22.3,
+              26.1,
+              25.4,
+              23.6,
+              17.4,
+              12.0,
+              8.8
+            ],
+            "phiE": [
+              0.78,
+              0.73,
+              0.63,
+              0.6,
+              0.55,
+              0.44,
+              0.37,
+              0.39,
+              0.49,
+              0.65,
+              0.76,
+              0.8
+            ]
+          }
+        },
+        "11": {
+          "capital": "Cádiz",
+          "thetaE": 12.8,
+          "phiE": 0.77,
+          "monthly": {
+            "thetaE": [
+              12.8,
+              13.5,
+              14.7,
+              16.2,
+              18.7,
+              21.5,
+              24.0,
+              24.5,
+              23.5,
+              20.1,
+              16.1,
+              13.3
+            ],
+            "phiE": [
+              0.77,
+              0.75,
+              0.7,
+              0.71,
+              0.71,
+              0.7,
+              0.69,
+              0.69,
+              0.7,
+              0.73,
+              0.76,
+              0.77
+            ]
+          }
+        },
+        "12": {
+          "capital": "Castellón",
+          "thetaE": 10.1,
+          "phiE": 0.68,
+          "monthly": {
+            "thetaE": [
+              10.1,
+              11.1,
+              12.7,
+              14.2,
+              17.2,
+              21.3,
+              24.1,
+              24.5,
+              22.3,
+              18.3,
+              13.5,
+              11.2
+            ],
+            "phiE": [
+              0.68,
+              0.66,
+              0.64,
+              0.66,
+              0.67,
+              0.66,
+              0.66,
+              0.69,
+              0.71,
+              0.71,
+              0.73,
+              0.69
+            ]
+          }
+        },
+        "51": {
+          "capital": "Ceuta",
+          "thetaE": 11.5,
+          "phiE": 0.87,
+          "monthly": {
+            "thetaE": [
+              11.5,
+              11.6,
+              12.6,
+              13.9,
+              16.3,
+              18.8,
+              21.7,
+              22.2,
+              20.2,
+              17.7,
+              14.1,
+              12.1
+            ],
+            "phiE": [
+              0.87,
+              0.87,
+              0.88,
+              0.87,
+              0.87,
+              0.87,
+              0.87,
+              0.87,
+              0.89,
+              0.89,
+              0.88,
+              0.88
+            ]
+          }
+        },
+        "13": {
+          "capital": "Ciudad Real",
+          "thetaE": 5.7,
+          "phiE": 0.8,
+          "monthly": {
+            "thetaE": [
+              5.7,
+              7.2,
+              9.6,
+              11.9,
+              16.0,
+              20.8,
+              25.0,
+              24.7,
+              21.0,
+              14.8,
+              9.1,
+              5.9
+            ],
+            "phiE": [
+              0.8,
+              0.74,
+              0.66,
+              0.65,
+              0.59,
+              0.54,
+              0.47,
+              0.48,
+              0.57,
+              0.68,
+              0.78,
+              0.82
+            ]
+          }
+        },
+        "14": {
+          "capital": "Córdoba",
+          "thetaE": 9.5,
+          "phiE": 0.8,
+          "monthly": {
+            "thetaE": [
+              9.5,
+              10.9,
+              13.1,
+              15.2,
+              19.2,
+              23.1,
+              26.9,
+              26.7,
+              23.7,
+              18.4,
+              12.9,
+              9.7
+            ],
+            "phiE": [
+              0.8,
+              0.75,
+              0.67,
+              0.65,
+              0.58,
+              0.53,
+              0.46,
+              0.49,
+              0.55,
+              0.67,
+              0.76,
+              0.8
+            ]
+          }
+        },
+        "15": {
+          "capital": "A Coruña",
+          "thetaE": 10.2,
+          "phiE": 0.77,
+          "monthly": {
+            "thetaE": [
+              10.2,
+              10.5,
+              11.3,
+              12.1,
+              14.1,
+              16.4,
+              18.4,
+              18.9,
+              18.1,
+              15.7,
+              12.7,
+              10.9
+            ],
+            "phiE": [
+              0.77,
+              0.76,
+              0.74,
+              0.76,
+              0.78,
+              0.79,
+              0.79,
+              0.79,
+              0.79,
+              0.79,
+              0.79,
+              0.78
+            ]
+          }
+        },
+        "16": {
+          "capital": "Cuenca",
+          "thetaE": 4.2,
+          "phiE": 0.78,
+          "monthly": {
+            "thetaE": [
+              4.2,
+              5.2,
+              7.4,
+              9.6,
+              13.6,
+              18.2,
+              22.4,
+              22.1,
+              18.6,
+              12.9,
+              7.6,
+              4.8
+            ],
+            "phiE": [
+              0.78,
+              0.73,
+              0.64,
+              0.62,
+              0.58,
+              0.54,
+              0.44,
+              0.46,
+              0.56,
+              0.68,
+              0.76,
+              0.79
+            ]
+          }
+        },
+        "17": {
+          "capital": "Girona",
+          "thetaE": 6.8,
+          "phiE": 0.77,
+          "monthly": {
+            "thetaE": [
+              6.8,
+              7.9,
+              9.8,
+              11.6,
+              15.4,
+              19.4,
+              22.8,
+              22.4,
+              19.9,
+              15.2,
+              10.2,
+              7.7
+            ],
+            "phiE": [
+              0.77,
+              0.73,
+              0.71,
+              0.71,
+              0.7,
+              0.67,
+              0.62,
+              0.68,
+              0.72,
+              0.76,
+              0.77,
+              0.75
+            ]
+          }
+        },
+        "18": {
+          "capital": "Granada",
+          "thetaE": 6.5,
+          "phiE": 0.76,
+          "monthly": {
+            "thetaE": [
+              6.5,
+              8.4,
+              10.5,
+              12.4,
+              16.3,
+              21.1,
+              24.3,
+              24.1,
+              21.1,
+              15.4,
+              10.6,
+              7.4
+            ],
+            "phiE": [
+              0.76,
+              0.71,
+              0.64,
+              0.61,
+              0.56,
+              0.49,
+              0.42,
+              0.42,
+              0.53,
+              0.62,
+              0.73,
+              0.77
+            ]
+          }
+        },
+        "19": {
+          "capital": "Guadalajara",
+          "thetaE": 5.5,
+          "phiE": 0.8,
+          "monthly": {
+            "thetaE": [
+              5.5,
+              6.8,
+              8.8,
+              11.6,
+              15.3,
+              19.8,
+              23.5,
+              22.8,
+              19.5,
+              14.1,
+              9.0,
+              5.9
+            ],
+            "phiE": [
+              0.8,
+              0.76,
+              0.69,
+              0.68,
+              0.67,
+              0.62,
+              0.53,
+              0.54,
+              0.61,
+              0.72,
+              0.79,
+              0.81
+            ]
+          }
+        },
+        "21": {
+          "capital": "Huelva",
+          "thetaE": 12.2,
+          "phiE": 0.76,
+          "monthly": {
+            "thetaE": [
+              12.2,
+              12.8,
+              14.4,
+              16.5,
+              19.2,
+              22.2,
+              25.3,
+              25.7,
+              23.7,
+              20.0,
+              15.4,
+              12.5
+            ],
+            "phiE": [
+              0.76,
+              0.72,
+              0.66,
+              0.63,
+              0.6,
+              0.59,
+              0.54,
+              0.54,
+              0.6,
+              0.67,
+              0.72,
+              0.75
+            ]
+          }
+        },
+        "22": {
+          "capital": "Huesca",
+          "thetaE": 4.7,
+          "phiE": 0.8,
+          "monthly": {
+            "thetaE": [
+              4.7,
+              6.7,
+              9.0,
+              11.3,
+              15.3,
+              19.5,
+              23.3,
+              22.7,
+              19.7,
+              14.6,
+              8.7,
+              5.3
+            ],
+            "phiE": [
+              0.8,
+              0.73,
+              0.64,
+              0.63,
+              0.6,
+              0.56,
+              0.48,
+              0.53,
+              0.61,
+              0.7,
+              0.78,
+              0.81
+            ]
+          }
+        },
+        "23": {
+          "capital": "Jaén",
+          "thetaE": 8.7,
+          "phiE": 0.77,
+          "monthly": {
+            "thetaE": [
+              8.7,
+              9.9,
+              12.0,
+              14.3,
+              18.5,
+              23.1,
+              27.2,
+              27.1,
+              23.6,
+              17.6,
+              12.2,
+              8.7
+            ],
+            "phiE": [
+              0.77,
+              0.72,
+              0.67,
+              0.64,
+              0.59,
+              0.53,
+              0.44,
+              0.45,
+              0.55,
+              0.67,
+              0.75,
+              0.77
+            ]
+          }
+        },
+        "24": {
+          "capital": "León",
+          "thetaE": 3.1,
+          "phiE": 0.81,
+          "monthly": {
+            "thetaE": [
+              3.1,
+              4.4,
+              6.6,
+              8.6,
+              12.1,
+              16.4,
+              19.7,
+              19.1,
+              16.7,
+              11.7,
+              6.8,
+              3.8
+            ],
+            "phiE": [
+              0.81,
+              0.75,
+              0.66,
+              0.63,
+              0.6,
+              0.57,
+              0.52,
+              0.53,
+              0.6,
+              0.72,
+              0.78,
+              0.81
+            ]
+          }
+        },
+        "25": {
+          "capital": "Lleida",
+          "thetaE": 5.5,
+          "phiE": 0.81,
+          "monthly": {
+            "thetaE": [
+              5.5,
+              7.8,
+              10.3,
+              13.0,
+              17.1,
+              21.2,
+              24.6,
+              24.0,
+              21.1,
+              15.7,
+              9.2,
+              5.8
+            ],
+            "phiE": [
+              0.81,
+              0.69,
+              0.61,
+              0.56,
+              0.55,
+              0.54,
+              0.47,
+              0.54,
+              0.62,
+              0.7,
+              0.77,
+              0.82
+            ]
+          }
+        },
+        "26": {
+          "capital": "Logroño",
+          "thetaE": 5.8,
+          "phiE": 0.75,
+          "monthly": {
+            "thetaE": [
+              5.8,
+              7.3,
+              9.4,
+              11.5,
+              15.1,
+              19.0,
+              22.2,
+              21.8,
+              19.2,
+              14.4,
+              9.1,
+              6.3
+            ],
+            "phiE": [
+              0.75,
+              0.68,
+              0.62,
+              0.61,
+              0.59,
+              0.56,
+              0.55,
+              0.56,
+              0.61,
+              0.69,
+              0.73,
+              0.76
+            ]
+          }
+        },
+        "27": {
+          "capital": "Lugo",
+          "thetaE": 5.8,
+          "phiE": 0.85,
+          "monthly": {
+            "thetaE": [
+              5.8,
+              6.5,
+              7.8,
+              9.5,
+              11.7,
+              14.9,
+              17.2,
+              17.5,
+              16.0,
+              12.5,
+              8.6,
+              6.3
+            ],
+            "phiE": [
+              0.85,
+              0.81,
+              0.77,
+              0.77,
+              0.76,
+              0.76,
+              0.75,
+              0.75,
+              0.77,
+              0.82,
+              0.84,
+              0.85
+            ]
+          }
+        },
+        "28": {
+          "capital": "Madrid",
+          "thetaE": 6.2,
+          "phiE": 0.71,
+          "monthly": {
+            "thetaE": [
+              6.2,
+              7.4,
+              9.9,
+              12.2,
+              16.0,
+              20.7,
+              24.4,
+              23.9,
+              20.5,
+              14.7,
+              9.4,
+              6.4
+            ],
+            "phiE": [
+              0.71,
+              0.66,
+              0.56,
+              0.55,
+              0.51,
+              0.46,
+              0.37,
+              0.39,
+              0.5,
+              0.63,
+              0.7,
+              0.73
+            ]
+          }
+        },
+        "29": {
+          "capital": "Málaga",
+          "thetaE": 12.2,
+          "phiE": 0.71,
+          "monthly": {
+            "thetaE": [
+              12.2,
+              12.8,
+              14.0,
+              15.8,
+              18.7,
+              22.1,
+              24.7,
+              25.3,
+              23.1,
+              19.1,
+              15.1,
+              12.6
+            ],
+            "phiE": [
+              0.71,
+              0.7,
+              0.66,
+              0.65,
+              0.61,
+              0.59,
+              0.6,
+              0.63,
+              0.65,
+              0.7,
+              0.72,
+              0.72
+            ]
+          }
+        },
+        "52": {
+          "capital": "Melilla",
+          "thetaE": 13.2,
+          "phiE": 0.72,
+          "monthly": {
+            "thetaE": [
+              13.2,
+              13.8,
+              14.6,
+              15.9,
+              18.3,
+              21.5,
+              24.4,
+              25.3,
+              23.5,
+              20.0,
+              16.6,
+              14.1
+            ],
+            "phiE": [
+              0.72,
+              0.72,
+              0.71,
+              0.7,
+              0.69,
+              0.68,
+              0.67,
+              0.68,
+              0.72,
+              0.75,
+              0.74,
+              0.73
+            ]
+          }
+        },
+        "30": {
+          "capital": "Murcia",
+          "thetaE": 10.6,
+          "phiE": 0.72,
+          "monthly": {
+            "thetaE": [
+              10.6,
+              11.4,
+              12.6,
+              14.5,
+              17.4,
+              21.0,
+              23.9,
+              24.6,
+              22.5,
+              18.7,
+              14.3,
+              11.3
+            ],
+            "phiE": [
+              0.72,
+              0.69,
+              0.69,
+              0.68,
+              0.7,
+              0.71,
+              0.72,
+              0.74,
+              0.73,
+              0.73,
+              0.73,
+              0.73
+            ]
+          }
+        },
+        "32": {
+          "capital": "Ourense",
+          "thetaE": 7.4,
+          "phiE": 0.83,
+          "monthly": {
+            "thetaE": [
+              7.4,
+              9.3,
+              10.7,
+              12.4,
+              15.3,
+              19.3,
+              21.9,
+              21.7,
+              19.8,
+              15.0,
+              10.6,
+              8.2
+            ],
+            "phiE": [
+              0.83,
+              0.75,
+              0.69,
+              0.7,
+              0.67,
+              0.64,
+              0.61,
+              0.62,
+              0.64,
+              0.73,
+              0.83,
+              0.84
+            ]
+          }
+        },
+        "33": {
+          "capital": "Oviedo",
+          "thetaE": 7.5,
+          "phiE": 0.77,
+          "monthly": {
+            "thetaE": [
+              7.5,
+              8.5,
+              9.5,
+              10.3,
+              12.8,
+              15.8,
+              18.0,
+              18.3,
+              17.4,
+              14.0,
+              10.4,
+              8.7
+            ],
+            "phiE": [
+              0.77,
+              0.75,
+              0.74,
+              0.77,
+              0.79,
+              0.8,
+              0.8,
+              0.8,
+              0.78,
+              0.78,
+              0.78,
+              0.76
+            ]
+          }
+        },
+        "34": {
+          "capital": "Palencia",
+          "thetaE": 4.1,
+          "phiE": 0.84,
+          "monthly": {
+            "thetaE": [
+              4.1,
+              5.6,
+              7.5,
+              9.5,
+              13.0,
+              17.2,
+              20.7,
+              20.3,
+              17.9,
+              13.0,
+              7.6,
+              4.4
+            ],
+            "phiE": [
+              0.84,
+              0.77,
+              0.71,
+              0.7,
+              0.67,
+              0.64,
+              0.58,
+              0.59,
+              0.63,
+              0.73,
+              0.8,
+              0.85
+            ]
+          }
+        },
+        "07": {
+          "capital": "Palma de Mallorca",
+          "thetaE": 11.6,
+          "phiE": 0.71,
+          "monthly": {
+            "thetaE": [
+              11.6,
+              11.8,
+              12.9,
+              14.7,
+              17.6,
+              21.8,
+              24.6,
+              25.3,
+              23.5,
+              20.0,
+              15.6,
+              13.0
+            ],
+            "phiE": [
+              0.71,
+              0.69,
+              0.68,
+              0.67,
+              0.69,
+              0.69,
+              0.67,
+              0.71,
+              0.73,
+              0.72,
+              0.72,
+              0.71
+            ]
+          }
+        },
+        "35": {
+          "capital": "Las Palmas",
+          "thetaE": 17.5,
+          "phiE": 0.68,
+          "monthly": {
+            "thetaE": [
+              17.5,
+              17.6,
+              18.3,
+              18.7,
+              19.9,
+              21.4,
+              23.2,
+              24.0,
+              23.9,
+              22.5,
+              20.4,
+              18.3
+            ],
+            "phiE": [
+              0.68,
+              0.67,
+              0.65,
+              0.66,
+              0.65,
+              0.67,
+              0.66,
+              0.67,
+              0.69,
+              0.7,
+              0.7,
+              0.68
+            ]
+          }
+        },
+        "31": {
+          "capital": "Pamplona",
+          "thetaE": 4.5,
+          "phiE": 0.8,
+          "monthly": {
+            "thetaE": [
+              4.5,
+              6.5,
+              8.0,
+              9.9,
+              13.3,
+              17.3,
+              20.5,
+              20.3,
+              18.2,
+              13.7,
+              8.3,
+              5.7
+            ],
+            "phiE": [
+              0.8,
+              0.73,
+              0.68,
+              0.66,
+              0.66,
+              0.62,
+              0.58,
+              0.61,
+              0.61,
+              0.68,
+              0.76,
+              0.79
+            ]
+          }
+        },
+        "36": {
+          "capital": "Pontevedra",
+          "thetaE": 9.9,
+          "phiE": 0.74,
+          "monthly": {
+            "thetaE": [
+              9.9,
+              10.7,
+              11.9,
+              13.6,
+              15.4,
+              18.8,
+              20.7,
+              20.5,
+              19.1,
+              16.1,
+              12.6,
+              10.3
+            ],
+            "phiE": [
+              0.74,
+              0.73,
+              0.69,
+              0.67,
+              0.68,
+              0.66,
+              0.65,
+              0.65,
+              0.69,
+              0.72,
+              0.73,
+              0.74
+            ]
+          }
+        },
+        "20": {
+          "capital": "San Sebastián",
+          "thetaE": 7.9,
+          "phiE": 0.76,
+          "monthly": {
+            "thetaE": [
+              7.9,
+              8.5,
+              9.4,
+              10.7,
+              13.5,
+              16.1,
+              18.4,
+              18.7,
+              18.0,
+              15.2,
+              10.9,
+              8.6
+            ],
+            "phiE": [
+              0.76,
+              0.74,
+              0.74,
+              0.79,
+              0.79,
+              0.82,
+              0.82,
+              0.83,
+              0.79,
+              0.76,
+              0.76,
+              0.76
+            ]
+          }
+        },
+        "37": {
+          "capital": "Salamanca",
+          "thetaE": 3.7,
+          "phiE": 0.85,
+          "monthly": {
+            "thetaE": [
+              3.7,
+              5.3,
+              7.3,
+              9.6,
+              13.4,
+              17.8,
+              21.0,
+              20.3,
+              17.5,
+              12.3,
+              7.0,
+              4.1
+            ],
+            "phiE": [
+              0.85,
+              0.78,
+              0.69,
+              0.66,
+              0.62,
+              0.58,
+              0.5,
+              0.53,
+              0.62,
+              0.74,
+              0.82,
+              0.86
+            ]
+          }
+        },
+        "38": {
+          "capital": "Santa Cruz de Tenerife",
+          "thetaE": 17.9,
+          "phiE": 0.66,
+          "monthly": {
+            "thetaE": [
+              17.9,
+              18.0,
+              18.6,
+              19.1,
+              20.5,
+              22.2,
+              24.6,
+              25.1,
+              24.4,
+              22.4,
+              20.7,
+              18.8
+            ],
+            "phiE": [
+              0.66,
+              0.66,
+              0.62,
+              0.61,
+              0.6,
+              0.59,
+              0.56,
+              0.58,
+              0.63,
+              0.65,
+              0.67,
+              0.66
+            ]
+          }
+        },
+        "39": {
+          "capital": "Santander",
+          "thetaE": 9.7,
+          "phiE": 0.71,
+          "monthly": {
+            "thetaE": [
+              9.7,
+              10.3,
+              10.8,
+              11.9,
+              14.3,
+              17.0,
+              19.3,
+              19.5,
+              18.5,
+              16.1,
+              12.5,
+              10.5
+            ],
+            "phiE": [
+              0.71,
+              0.71,
+              0.71,
+              0.74,
+              0.75,
+              0.77,
+              0.77,
+              0.78,
+              0.77,
+              0.75,
+              0.73,
+              0.72
+            ]
+          }
+        },
+        "40": {
+          "capital": "Segovia",
+          "thetaE": 4.1,
+          "phiE": 0.75,
+          "monthly": {
+            "thetaE": [
+              4.1,
+              5.2,
+              7.1,
+              9.1,
+              13.1,
+              17.7,
+              21.6,
+              21.2,
+              17.9,
+              12.6,
+              7.3,
+              4.3
+            ],
+            "phiE": [
+              0.75,
+              0.71,
+              0.65,
+              0.65,
+              0.61,
+              0.55,
+              0.47,
+              0.49,
+              0.55,
+              0.65,
+              0.73,
+              0.78
+            ]
+          }
+        },
+        "41": {
+          "capital": "Sevilla",
+          "thetaE": 10.7,
+          "phiE": 0.79,
+          "monthly": {
+            "thetaE": [
+              10.7,
+              11.9,
+              14.0,
+              16.0,
+              19.6,
+              23.4,
+              26.8,
+              26.8,
+              24.4,
+              19.5,
+              14.3,
+              11.1
+            ],
+            "phiE": [
+              0.79,
+              0.75,
+              0.68,
+              0.65,
+              0.59,
+              0.56,
+              0.51,
+              0.52,
+              0.58,
+              0.67,
+              0.76,
+              0.79
+            ]
+          }
+        },
+        "42": {
+          "capital": "Soria",
+          "thetaE": 2.9,
+          "phiE": 0.77,
+          "monthly": {
+            "thetaE": [
+              2.9,
+              4.0,
+              5.8,
+              8.0,
+              11.8,
+              16.1,
+              19.9,
+              19.5,
+              16.5,
+              11.3,
+              6.1,
+              3.4
+            ],
+            "phiE": [
+              0.77,
+              0.73,
+              0.68,
+              0.67,
+              0.64,
+              0.6,
+              0.53,
+              0.54,
+              0.6,
+              0.7,
+              0.76,
+              0.78
+            ]
+          }
+        },
+        "43": {
+          "capital": "Tarragona",
+          "thetaE": 10.0,
+          "phiE": 0.66,
+          "monthly": {
+            "thetaE": [
+              10.0,
+              11.3,
+              13.1,
+              15.3,
+              18.4,
+              22.2,
+              25.3,
+              25.3,
+              22.7,
+              18.4,
+              13.5,
+              10.7
+            ],
+            "phiE": [
+              0.66,
+              0.63,
+              0.59,
+              0.59,
+              0.61,
+              0.6,
+              0.59,
+              0.62,
+              0.67,
+              0.7,
+              0.68,
+              0.66
+            ]
+          }
+        },
+        "44": {
+          "capital": "Teruel",
+          "thetaE": 3.8,
+          "phiE": 0.72,
+          "monthly": {
+            "thetaE": [
+              3.8,
+              4.8,
+              6.8,
+              9.3,
+              12.6,
+              17.5,
+              21.3,
+              20.6,
+              17.9,
+              12.1,
+              7.0,
+              4.5
+            ],
+            "phiE": [
+              0.72,
+              0.67,
+              0.6,
+              0.6,
+              0.6,
+              0.55,
+              0.5,
+              0.54,
+              0.59,
+              0.66,
+              0.71,
+              0.76
+            ]
+          }
+        },
+        "45": {
+          "capital": "Toledo",
+          "thetaE": 6.1,
+          "phiE": 0.78,
+          "monthly": {
+            "thetaE": [
+              6.1,
+              8.1,
+              10.9,
+              12.8,
+              16.8,
+              22.5,
+              26.5,
+              25.7,
+              22.6,
+              16.2,
+              10.7,
+              7.1
+            ],
+            "phiE": [
+              0.78,
+              0.72,
+              0.59,
+              0.62,
+              0.55,
+              0.47,
+              0.43,
+              0.45,
+              0.54,
+              0.68,
+              0.77,
+              0.81
+            ]
+          }
+        },
+        "46": {
+          "capital": "Valencia",
+          "thetaE": 10.4,
+          "phiE": 0.63,
+          "monthly": {
+            "thetaE": [
+              10.4,
+              11.4,
+              12.6,
+              14.5,
+              17.4,
+              21.1,
+              24.0,
+              24.5,
+              22.3,
+              18.3,
+              13.7,
+              10.9
+            ],
+            "phiE": [
+              0.63,
+              0.61,
+              0.6,
+              0.62,
+              0.64,
+              0.66,
+              0.67,
+              0.69,
+              0.68,
+              0.67,
+              0.66,
+              0.64
+            ]
+          }
+        },
+        "47": {
+          "capital": "Valladolid",
+          "thetaE": 4.1,
+          "phiE": 0.82,
+          "monthly": {
+            "thetaE": [
+              4.1,
+              6.1,
+              8.1,
+              9.9,
+              13.3,
+              18.0,
+              21.5,
+              21.3,
+              18.6,
+              12.9,
+              7.6,
+              4.8
+            ],
+            "phiE": [
+              0.82,
+              0.72,
+              0.62,
+              0.61,
+              0.57,
+              0.52,
+              0.44,
+              0.46,
+              0.53,
+              0.67,
+              0.77,
+              0.83
+            ]
+          }
+        },
+        "01": {
+          "capital": "Vitoria",
+          "thetaE": 4.6,
+          "phiE": 0.83,
+          "monthly": {
+            "thetaE": [
+              4.6,
+              6.0,
+              7.2,
+              9.2,
+              12.4,
+              15.6,
+              18.3,
+              18.5,
+              16.5,
+              12.7,
+              7.5,
+              5.0
+            ],
+            "phiE": [
+              0.83,
+              0.78,
+              0.72,
+              0.71,
+              0.71,
+              0.71,
+              0.69,
+              0.7,
+              0.7,
+              0.74,
+              0.81,
+              0.83
+            ]
+          }
+        },
+        "49": {
+          "capital": "Zamora",
+          "thetaE": 4.3,
+          "phiE": 0.83,
+          "monthly": {
+            "thetaE": [
+              4.3,
+              6.3,
+              8.3,
+              10.5,
+              14.0,
+              18.5,
+              21.8,
+              21.3,
+              18.7,
+              13.4,
+              8.1,
+              4.9
+            ],
+            "phiE": [
+              0.83,
+              0.75,
+              0.65,
+              0.63,
+              0.59,
+              0.54,
+              0.47,
+              0.5,
+              0.58,
+              0.7,
+              0.79,
+              0.83
+            ]
+          }
+        },
+        "50": {
+          "capital": "Zaragoza",
+          "thetaE": 6.2,
+          "phiE": 0.76,
+          "monthly": {
+            "thetaE": [
+              6.2,
+              8.0,
+              10.3,
+              12.8,
+              16.8,
+              21.0,
+              24.3,
+              23.8,
+              20.7,
+              15.4,
+              9.7,
+              6.5
+            ],
+            "phiE": [
+              0.76,
+              0.69,
+              0.6,
+              0.59,
+              0.55,
+              0.52,
+              0.48,
+              0.54,
+              0.61,
+              0.7,
+              0.75,
+              0.77
+            ]
+          }
+        }
+      },
+      "pages": [
+        12,
+        13
+      ]
+    },
+    "airLayerMu": 1,
+    "notes": [
+      "Condensaciones superficiales: se cumple si fRsi ≥ fRsi,min (tabla 1) para la zona climática de invierno y la clase de higrometría.",
+      "Condensaciones intersticiales: en cada interfase la presión de vapor Pn no debe superar la de saturación Psat (procedimiento del DA DB-HE/2, enero, θi = 20 °C).",
+      "Localidades a mayor altitud que la capital: θe se reduce 1 °C por cada 100 m de diferencia y φe se obtiene manteniendo la humedad absoluta (presión de vapor) de la capital.",
+      "No es necesario comprobar los muros en contacto con el terreno ni las particiones con espacios no habitables con baja producción de vapor.",
+      "Si se producen condensaciones en una capa distinta del aislamiento, el DA exige comprobar mes a mes que la cantidad acumulada anual no supera la evaporable: no se calcula aquí."
+    ],
+    "verifiedOn": "2026-11-02"
+  }
+}

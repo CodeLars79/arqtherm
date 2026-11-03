@@ -1,0 +1,76 @@
+{
+  "datasetId": "arqtherm-cte-he1",
+  "datasetVersion": "2026.11.1",
+  "verifiedOn": "2026-10-29",
+  "documents": {
+    "DB-HE": {
+      "id": "DB-HE",
+      "title": "Documento Básico HE Ahorro de energía (texto consolidado)",
+      "revision": "14 junio 2022",
+      "legalBasis": [
+        "Real Decreto 732/2019, de 20 de diciembre (BOE 27/12/2019)",
+        "Real Decreto 450/2022, de 14 de junio (BOE 15/06/2022)",
+        "Corrección de errores del Real Decreto 450/2022 (BOE 02/02/2023)"
+      ],
+      "sourceUrl": "https://www.codigotecnico.org/pdf/Documentos/HE/DBHE.pdf",
+      "indexUrl": "https://www.codigotecnico.org/DocumentosCTE/AhorroEnergia.html",
+      "notes": "El texto consolidado publicado en codigotecnico.org no tiene valor jurídico; el texto legal es el publicado en el BOE."
+    },
+    "DA DB-HE/1": {
+      "id": "DA DB-HE/1",
+      "title": "Documento de Apoyo DA DB-HE/1 — Cálculo de parámetros característicos de la envolvente",
+      "revision": "Enero 2020",
+      "sourceUrl": "https://www.codigotecnico.org/pdf/Documentos/HE/DA_DB-HE-1_Calculo_de_parametros_caracteristicos_de_la_envolvente.pdf",
+      "notes": "Los Documentos de Apoyo no tienen valor reglamentario; describen métodos simplificados que no impiden el uso de otros métodos contrastados."
+    },
+    "Guia-DB-HE-2019": {
+      "id": "Guía DB-HE 2019",
+      "title": "Guía de aplicación del DB-HE 2019",
+      "revision": "Ministerio de Transportes, Movilidad y Agenda Urbana",
+      "sourceUrl": "https://www.codigotecnico.org/pdf/GuiasyOtros/Guia_aplicacion_DBHE2019.pdf",
+      "notes": "Documento divulgativo sin valor reglamentario; se usa para cotejar la tabla a-Anejo E."
+    }
+  },
+  "applicability": {
+    "status": "current-as-verified",
+    "summary": "Tablas 3.1.1.a-HE1 y 3.2-HE1 cotejadas el 2026-10-29 con el DB-HE consolidado de 14 de junio de 2022 (codigotecnico.org). Tabla a-Anejo E cotejada con la Guía de aplicación del DB-HE 2019 (codigotecnico.org).",
+    "transitionalNotes": [
+      "Las modificaciones del RD 450/2022 son de aplicación obligatoria a obras cuya licencia se solicite a partir del 16 de diciembre de 2022.",
+      "En noviembre de 2025 el Ministerio de Vivienda y Agenda Urbana sometió a audiencia pública un proyecto de real decreto de modificación del CTE (transposición parcial de la Directiva (UE) 2024/1275). En la fecha de verificación no se ha confirmado su publicación en el BOE ni sus efectos sobre la tabla 3.1.1.a-HE1. Compruebe la versión vigente y su régimen transitorio para la fecha de solicitud de licencia de su proyecto.",
+      "En reformas, los valores límite solo se aplican a los elementos que se sustituyan, incorporen o modifiquen sustancialmente, o cuyas condiciones cambien (DB-HE, HE1 3.1.1.2 y 3.2.2)."
+    ]
+  },
+  "climateZones": [
+    {
+      "id": "alpha",
+      "label": "α",
+      "description": "Zona climática de invierno α"
+    },
+    {
+      "id": "A",
+      "label": "A",
+      "description": "Zona climática de invierno A"
+    },
+    {
+      "id": "B",
+      "label": "B",
+      "description": "Zona climática de invierno B"
+    },
+    {
+      "id": "C",
+      "label": "C",
+      "description": "Zona climática de invierno C"
+    },
+    {
+      "id": "D",
+      "label": "D",
+      "description": "Zona climática de invierno D"
+    },
+    {
+      "id": "E",
+      "label": "E",
+      "description": "Zona climática de invierno E"
+    }
+  ],
+  "climateZoneHelp": "La zona climática de invierno se obtiene del Anejo B del DB-HE a partir de la provincia y la altitud, o de documentos reconocidos de las Comunidades Autónomas."
+}

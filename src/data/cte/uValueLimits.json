@@ -1,0 +1,181 @@
+{
+  "datasetVersion": "2026.11.1",
+  "tables": [
+    {
+      "id": "HE1-3.1.1.a",
+      "document": "DB-HE",
+      "reference": "DB-HE, Sección HE 1, apartado 3.1.1, tabla 3.1.1.a-HE1 «Valores límite de transmitancia térmica, Ulim [W/m²K]»",
+      "page": 16,
+      "validationStatus": "verified",
+      "verifiedOn": "2026-10-29",
+      "verifiedAgainst": "https://www.codigotecnico.org/pdf/Documentos/HE/DBHE.pdf",
+      "rows": [
+        {
+          "id": "UM_US",
+          "label": "Muros y suelos en contacto con el aire exterior (US, UM)",
+          "values": {
+            "alpha": 0.8,
+            "A": 0.7,
+            "B": 0.56,
+            "C": 0.49,
+            "D": 0.41,
+            "E": 0.37
+          }
+        },
+        {
+          "id": "UC",
+          "label": "Cubiertas en contacto con el aire exterior (UC)",
+          "values": {
+            "alpha": 0.55,
+            "A": 0.5,
+            "B": 0.44,
+            "C": 0.4,
+            "D": 0.35,
+            "E": 0.33
+          }
+        },
+        {
+          "id": "UT_UMD",
+          "label": "Muros, suelos y cubiertas en contacto con espacios no habitables o con el terreno (UT). Medianerías o particiones interiores pertenecientes a la envolvente térmica (UMD)",
+          "values": {
+            "alpha": 0.9,
+            "A": 0.8,
+            "B": 0.75,
+            "C": 0.7,
+            "D": 0.65,
+            "E": 0.59
+          }
+        },
+        {
+          "id": "UH",
+          "label": "Huecos (conjunto de marco, vidrio y, en su caso, cajón de persiana) (UH)",
+          "values": {
+            "alpha": 3.2,
+            "A": 2.7,
+            "B": 2.3,
+            "C": 2.1,
+            "D": 1.8,
+            "E": 1.8
+          },
+          "notes": "Los huecos con uso de escaparate en unidades de uso con actividad comercial pueden incrementar UH en un 50 %. No se usa en el MVP (huecos no soportados)."
+        }
+      ],
+      "kind": "limit"
+    },
+    {
+      "id": "HE1-3.2",
+      "document": "DB-HE",
+      "reference": "DB-HE, Sección HE 1, apartado 3.2, tabla 3.2-HE1 «Transmitancia térmica límite de particiones interiores, Ulim [W/m²K]»",
+      "page": 18,
+      "validationStatus": "verified",
+      "verifiedOn": "2026-10-29",
+      "verifiedAgainst": "https://www.codigotecnico.org/pdf/Documentos/HE/DBHE.pdf",
+      "rows": [
+        {
+          "id": "PART_SAME_H",
+          "label": "Entre unidades del mismo uso — particiones horizontales",
+          "values": {
+            "alpha": 1.9,
+            "A": 1.8,
+            "B": 1.55,
+            "C": 1.35,
+            "D": 1.2,
+            "E": 1.0
+          }
+        },
+        {
+          "id": "PART_SAME_V",
+          "label": "Entre unidades del mismo uso — particiones verticales",
+          "values": {
+            "alpha": 1.4,
+            "A": 1.4,
+            "B": 1.2,
+            "C": 1.2,
+            "D": 1.2,
+            "E": 1.0
+          }
+        },
+        {
+          "id": "PART_OTHER",
+          "label": "Entre unidades de distinto uso, o entre unidades de uso y zonas comunes — particiones horizontales y verticales",
+          "values": {
+            "alpha": 1.35,
+            "A": 1.25,
+            "B": 1.1,
+            "C": 0.95,
+            "D": 0.85,
+            "E": 0.7
+          }
+        }
+      ],
+      "kind": "limit"
+    },
+    {
+      "id": "HE-AnejoE",
+      "kind": "orientative",
+      "document": "DB-HE",
+      "reference": "DB-HE, Anejo E «Valores orientativos de transmitancia», tabla a-Anejo E «Transmitancia térmica del elemento, U [W/m²K]»",
+      "page": 51,
+      "validationStatus": "verified",
+      "verifiedOn": "2026-10-29",
+      "verifiedAgainst": "https://www.codigotecnico.org/pdf/GuiasyOtros/Guia_aplicacion_DBHE2019.pdf",
+      "verificationNote": "Valores cotejados con la reproducción de la tabla a-Anejo E en la Guía de aplicación del DB-HE 2019 (codigotecnico.org, pág. 38) y con la transcripción del DB-HE consolidado de 14 de junio de 2022; coinciden. La página del DB-HE consolidado (51) procede de su índice.",
+      "scope": [
+        "Valores orientativos, no exigencias: el DB-HE los propone para el predimensionado de soluciones constructivas de edificios de uso residencial privado, con vistas al cumplimiento del coeficiente global de transmisión de calor K (HE1, apartado 3.1.1).",
+        "Los valores presuponen un correcto tratamiento de los puentes térmicos.",
+        "Superar un valor orientativo no supone incumplir el CTE; quedar por debajo no garantiza el cumplimiento de K."
+      ],
+      "rows": [
+        {
+          "id": "UM_US",
+          "label": "Muros y suelos en contacto con el aire exterior (US, UM)",
+          "values": {
+            "alpha": 0.56,
+            "A": 0.5,
+            "B": 0.38,
+            "C": 0.29,
+            "D": 0.27,
+            "E": 0.23
+          }
+        },
+        {
+          "id": "UC",
+          "label": "Cubiertas en contacto con el aire exterior (UC)",
+          "values": {
+            "alpha": 0.5,
+            "A": 0.44,
+            "B": 0.33,
+            "C": 0.23,
+            "D": 0.22,
+            "E": 0.19
+          }
+        },
+        {
+          "id": "UT",
+          "label": "Elementos en contacto con espacios no habitables o con el terreno (UT)",
+          "values": {
+            "alpha": 0.8,
+            "A": 0.8,
+            "B": 0.69,
+            "C": 0.48,
+            "D": 0.48,
+            "E": 0.48
+          }
+        },
+        {
+          "id": "UH",
+          "label": "Huecos (conjunto de marco, vidrio y, en su caso, cajón de persiana) (UH)",
+          "values": {
+            "alpha": 2.7,
+            "A": 2.7,
+            "B": 2.0,
+            "C": 2.0,
+            "D": 1.6,
+            "E": 1.5
+          },
+          "notes": "No se usa en esta versión (huecos no soportados)."
+        }
+      ]
+    }
+  ]
+}

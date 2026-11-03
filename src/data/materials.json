@@ -1,0 +1,1897 @@
+{
+  "datasetVersion": "2026.11.1",
+  "sources": {
+    "CEC-6.3": {
+      "title": "Catálogo de Elementos Constructivos del CTE (CEC), versión 6.3",
+      "publisher": "Instituto de Ciencias de la Construcción Eduardo Torroja (IETcc-CSIC), con CEPCO y AICIA, para el Ministerio",
+      "date": "2010-03",
+      "officialUrl": "https://www.codigotecnico.org/Programas/CatalogoElementosConstructivos.html",
+      "transcribedFrom": "PDF «CAT-EC-v06.3_marzo_10.pdf» publicado en codigotecnico.org (rotulado «Versión preliminar: Marzo 10. Borrador»; SHA-256 f59f5c02dcf174d8…)",
+      "valueType": "design",
+      "conditions": "Valores térmicos de diseño. Salvo justificación, definidos para 10 °C y humedad de equilibrio con un ambiente a 23 °C y 50 % HR (CEC, capítulo 3).",
+      "legalNote": "El DB-HE (Introducción, III) indica que, para productos fabricados industrialmente, los valores del Catálogo tienen únicamente carácter genérico y orientativo; los valores de diseño deben obtenerse de los valores declarados por el fabricante (HE1, 5.1.5).",
+      "verification": {
+        "verifiedOn": "2026-11-02",
+        "method": "Cotejo automático de cada valor (λ o R, μ, rangos) con el texto de las tablas del PDF y revisión del autor.",
+        "reviewedBy": "Lars Sørensen"
+      }
+    },
+    "DA-DB-HE-1": {
+      "title": "DA DB-HE/1 Cálculo de parámetros característicos de la envolvente",
+      "date": "2020-01",
+      "officialUrl": "https://www.codigotecnico.org/pdf/Documentos/HE/DA_DB-HE-1_Calculo_de_parametros_caracteristicos_de_la_envolvente.pdf"
+    },
+    "MFR-PLACA-CEMENTO": {
+      "title": "Placa de cemento para exteriores · valores declarados por un fabricante",
+      "date": "2026-11",
+      "valueType": "declared",
+      "conditions": "Conductividad térmica y factor μ declarados por el fabricante de un producto comercial, incorporados a petición del autor de Arqtherm. Use los valores de la ficha técnica del producto de su proyecto."
+    },
+    "AUTOR-ARQTHERM": {
+      "title": "Valores indicados por el autor de Arqtherm",
+      "date": "2026-11",
+      "valueType": "declared",
+      "conditions": "Valores genéricos aportados por el autor para las plantillas. Use los de la ficha técnica del producto de su proyecto."
+    }
+  },
+  "categories": [
+    {
+      "id": "insulation",
+      "label": "Aislamiento térmico"
+    },
+    {
+      "id": "ceramic",
+      "label": "Fábrica y piezas cerámicas"
+    },
+    {
+      "id": "concrete",
+      "label": "Hormigón y mortero"
+    },
+    {
+      "id": "stone",
+      "label": "Piedra"
+    },
+    {
+      "id": "timber",
+      "label": "Madera y derivados"
+    },
+    {
+      "id": "gypsum",
+      "label": "Yeso y enlucidos"
+    },
+    {
+      "id": "air",
+      "label": "Cámaras de aire"
+    },
+    {
+      "id": "other",
+      "label": "Otros materiales"
+    }
+  ],
+  "materials": [
+    {
+      "id": "cec-mw",
+      "name": "Lana mineral (MW)",
+      "category": "insulation",
+      "thermalConductivity": 0.036,
+      "conductivityRange": [
+        0.031,
+        0.05
+      ],
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.8.1 «Aislantes térmicos»",
+      "dataStatus": "reference-verified",
+      "valueType": "design-generic-default",
+      "properties": {
+        "mu": 1
+      },
+      "notes": "El CEC da un rango 0,031–0,050 W/(m·K) (verificado). Arqtherm usa por defecto 0,036 W/(m·K), valor del autor dentro del rango. Sustitúyalo por el valor de diseño del producto concreto.",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 21,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-eps",
+      "name": "Poliestireno expandido (EPS)",
+      "category": "insulation",
+      "thermalConductivity": 0.039,
+      "conductivityRange": [
+        0.029,
+        0.039
+      ],
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.8.1 «Aislantes térmicos»",
+      "dataStatus": "reference-verified",
+      "valueType": "design-generic-range-upper",
+      "properties": {
+        "muRange": [
+          20,
+          100
+        ]
+      },
+      "notes": "0,039 W/(m·K) es el valor recomendado por el CEC; existen EPS de hasta 0,046 W/(m·K). Use el valor de diseño del producto.",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 21,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-xps-co2",
+      "name": "Poliestireno extruido (XPS) expandido con CO₂",
+      "category": "insulation",
+      "thermalConductivity": 0.039,
+      "conductivityRange": [
+        0.033,
+        0.039
+      ],
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.8.1 «Aislantes térmicos»",
+      "dataStatus": "reference-verified",
+      "valueType": "design-generic-range-upper",
+      "properties": {
+        "muRange": [
+          100,
+          220
+        ]
+      },
+      "notes": "Rango del CEC 0,033–0,039 W/(m·K); se toma el límite superior.",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 21,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-pur-proy-co2",
+      "name": "Espuma de poliuretano proyectada (PUR), CO₂, celda cerrada",
+      "category": "insulation",
+      "thermalConductivity": 0.035,
+      "conductivityRange": [
+        0.032,
+        0.035
+      ],
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.8.1 «Aislantes térmicos»",
+      "dataStatus": "reference-verified",
+      "valueType": "design-generic-range-upper",
+      "properties": {
+        "densityRange": [
+          40,
+          60
+        ],
+        "muRange": [
+          100,
+          150
+        ]
+      },
+      "notes": "Rango del CEC 0,032–0,035 W/(m·K); se toma el límite superior.",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 21,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-pur-plancha-perm",
+      "name": "Plancha de PUR/PIR con revestimiento permeable a los gases",
+      "category": "insulation",
+      "thermalConductivity": 0.03,
+      "conductivityRange": [
+        0.027,
+        0.03
+      ],
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.8.1 «Aislantes térmicos»",
+      "dataStatus": "reference-verified",
+      "valueType": "design-generic-range-upper",
+      "properties": {
+        "muRange": [
+          60,
+          150
+        ]
+      },
+      "notes": "Rango del CEC 0,027–0,030 W/(m·K); se toma el límite superior.",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 21,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-cg",
+      "name": "Panel de vidrio celular (CG)",
+      "category": "insulation",
+      "thermalConductivity": 0.05,
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.8.1 «Aislantes térmicos»",
+      "dataStatus": "reference-verified",
+      "valueType": "design",
+      "properties": {
+        "densityRange": [
+          100,
+          150
+        ],
+        "muInfinite": true
+      },
+      "notes": "",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 21,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-epb",
+      "name": "Panel de perlita expandida (EPB) (>80 %)",
+      "category": "insulation",
+      "thermalConductivity": 0.062,
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.8.1 «Aislantes térmicos»",
+      "dataStatus": "reference-verified",
+      "valueType": "design",
+      "properties": {
+        "densityRange": [
+          140,
+          240
+        ],
+        "mu": 5
+      },
+      "notes": "",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 21,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-corcho-exp",
+      "name": "Corcho expandido puro (ICB)",
+      "category": "insulation",
+      "thermalConductivity": 0.049,
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.3.2 «Paneles de madera — Corcho»",
+      "dataStatus": "reference-verified",
+      "valueType": "design",
+      "properties": {
+        "densityRange": [
+          100,
+          150
+        ],
+        "specificHeat": 1560,
+        "mu": 5
+      },
+      "notes": "",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 17,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-lh",
+      "name": "Ladrillo hueco LH (pieza)",
+      "category": "ceramic",
+      "thermalConductivity": 0.32,
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.14 «Productos cerámicos»",
+      "dataStatus": "reference-verified",
+      "valueType": "design",
+      "properties": {
+        "density": 770,
+        "specificHeat": 1000,
+        "mu": 10
+      },
+      "notes": "Conductividad de la pieza. Para la fábrica completa con mortero, el CEC (3.17.1) da resistencias térmicas: véanse las entradas «Fábrica de LH».",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 24,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-lp",
+      "name": "Ladrillo perforado LP (pieza)",
+      "category": "ceramic",
+      "thermalConductivity": 0.35,
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.14 «Productos cerámicos»",
+      "dataStatus": "reference-verified",
+      "valueType": "design",
+      "properties": {
+        "density": 780,
+        "specificHeat": 1000,
+        "mu": 10
+      },
+      "notes": "Conductividad de la pieza, sin juntas de mortero. Valor de la pieza aislada. Para una fábrica de ½ pie o 1 pie con sus juntas de mortero use las entradas «Fábrica de ladrillo perforado» (CEC, apartado 3.17.1), con menor resistencia.",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 24,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-lm",
+      "name": "Ladrillo macizo LM (pieza)",
+      "category": "ceramic",
+      "thermalConductivity": 0.85,
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.14 «Productos cerámicos»",
+      "dataStatus": "reference-verified",
+      "valueType": "design",
+      "properties": {
+        "density": 2300,
+        "specificHeat": 1000,
+        "mu": 10
+      },
+      "notes": "Conductividad de la pieza, sin juntas de mortero. Valor de la pieza aislada. Para una fábrica con juntas use «Fábrica de ladrillo macizo» (CEC, apartado 3.17.1).",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 24,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-bc-pieza",
+      "name": "Bloque cerámico de arcilla aligerada (pieza)",
+      "category": "ceramic",
+      "thermalConductivity": 0.28,
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.14 «Productos cerámicos»",
+      "dataStatus": "reference-verified",
+      "valueType": "design",
+      "properties": {
+        "density": 910,
+        "specificHeat": 1000,
+        "mu": 10
+      },
+      "notes": "",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 24,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-fab-lh-sencillo",
+      "name": "Fábrica: tabique de LH sencillo",
+      "category": "ceramic",
+      "thermalResistance": 0.09,
+      "thicknessRangeMm": [
+        40,
+        60
+      ],
+      "unit": "m²·K/W",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.17.1 «Fábrica de ladrillo cerámico»",
+      "dataStatus": "reference-verified",
+      "valueType": "design-element-resistance",
+      "properties": {
+        "density": 1000,
+        "specificHeat": 1000,
+        "mu": 10
+      },
+      "notes": "Resistencia térmica de la fábrica completa (mortero ρ = 1900 kg/m³). Válida para formato métrico y catalán y para espesores de 40 a 60 mm.",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 26,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-fab-lh-doble",
+      "name": "Fábrica: tabicón de LH doble",
+      "category": "ceramic",
+      "thermalResistance": 0.16,
+      "thicknessRangeMm": [
+        61,
+        90
+      ],
+      "unit": "m²·K/W",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.17.1 «Fábrica de ladrillo cerámico»",
+      "dataStatus": "reference-verified",
+      "valueType": "design-element-resistance",
+      "properties": {
+        "density": 930,
+        "specificHeat": 1000,
+        "mu": 10
+      },
+      "notes": "Resistencia térmica de la fábrica completa (mortero ρ = 1900 kg/m³). Espesor 60 < E ≤ 90 mm.",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 26,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-fab-lh-triple",
+      "name": "Fábrica: tabicón de LH triple",
+      "category": "ceramic",
+      "thermalResistance": 0.23,
+      "thicknessRangeMm": [
+        100,
+        110
+      ],
+      "unit": "m²·K/W",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.17.1 «Fábrica de ladrillo cerámico»",
+      "dataStatus": "reference-verified",
+      "valueType": "design-element-resistance",
+      "properties": {
+        "density": 920,
+        "specificHeat": 1000,
+        "mu": 10
+      },
+      "notes": "Resistencia térmica de la fábrica completa (mortero ρ = 1900 kg/m³). Espesor 100 a 110 mm.",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 26,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-fab-lp-medio-40-60",
+      "name": "Fábrica de ladrillo perforado LP ½ pie (G 40–60 mm)",
+      "category": "ceramic",
+      "thermalResistance": 0.18,
+      "thicknessRangeMm": [
+        115,
+        130
+      ],
+      "unit": "m²·K/W",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.17.1 «Fábrica de ladrillo cerámico»",
+      "dataStatus": "reference-verified",
+      "valueType": "design-element-resistance",
+      "properties": {
+        "density": 1140,
+        "specificHeat": 1000,
+        "mu": 10
+      },
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 26,
+        "verifiedOn": "2026-11-02"
+      },
+      "notes": "G: grueso (altura) de la pieza en mm, según la interpretación de Arqtherm de la tabla del CEC. Mortero de 1900 kg/m³. Válido para formato métrico y catalán."
+    },
+    {
+      "id": "cec-fab-lp-medio-60-80",
+      "name": "Fábrica de ladrillo perforado LP ½ pie (G 60–80 mm)",
+      "category": "ceramic",
+      "thermalResistance": 0.21,
+      "thicknessRangeMm": [
+        115,
+        130
+      ],
+      "unit": "m²·K/W",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.17.1 «Fábrica de ladrillo cerámico»",
+      "dataStatus": "reference-verified",
+      "valueType": "design-element-resistance",
+      "properties": {
+        "density": 1020,
+        "specificHeat": 1000,
+        "mu": 10
+      },
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 26,
+        "verifiedOn": "2026-11-02"
+      },
+      "notes": "G: grueso (altura) de la pieza en mm, según la interpretación de Arqtherm de la tabla del CEC. Mortero de 1900 kg/m³. Válido para formato métrico y catalán."
+    },
+    {
+      "id": "cec-fab-lp-medio-80-100",
+      "name": "Fábrica de ladrillo perforado LP ½ pie (G 80–100 mm)",
+      "category": "ceramic",
+      "thermalResistance": 0.23,
+      "thicknessRangeMm": [
+        115,
+        130
+      ],
+      "unit": "m²·K/W",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.17.1 «Fábrica de ladrillo cerámico»",
+      "dataStatus": "reference-verified",
+      "valueType": "design-element-resistance",
+      "properties": {
+        "density": 900,
+        "specificHeat": 1000,
+        "mu": 10
+      },
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 26,
+        "verifiedOn": "2026-11-02"
+      },
+      "notes": "G: grueso (altura) de la pieza en mm, según la interpretación de Arqtherm de la tabla del CEC. Mortero de 1900 kg/m³. Válido para formato métrico y catalán."
+    },
+    {
+      "id": "cec-fab-lp-pie-40-60",
+      "name": "Fábrica de ladrillo perforado LP 1 pie (G 40–60 mm)",
+      "category": "ceramic",
+      "thermalResistance": 0.35,
+      "thicknessRangeMm": [
+        240,
+        280
+      ],
+      "unit": "m²·K/W",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.17.1 «Fábrica de ladrillo cerámico»",
+      "dataStatus": "reference-verified",
+      "valueType": "design-element-resistance",
+      "properties": {
+        "density": 1220,
+        "specificHeat": 1000,
+        "mu": 10
+      },
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 26,
+        "verifiedOn": "2026-11-02"
+      },
+      "notes": "G: grueso (altura) de la pieza en mm, según la interpretación de Arqtherm de la tabla del CEC. Mortero de 1900 kg/m³. Válido para formato métrico y catalán."
+    },
+    {
+      "id": "cec-fab-lp-pie-60-80",
+      "name": "Fábrica de ladrillo perforado LP 1 pie (G 60–80 mm)",
+      "category": "ceramic",
+      "thermalResistance": 0.41,
+      "thicknessRangeMm": [
+        240,
+        280
+      ],
+      "unit": "m²·K/W",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.17.1 «Fábrica de ladrillo cerámico»",
+      "dataStatus": "reference-verified",
+      "valueType": "design-element-resistance",
+      "properties": {
+        "density": 1150,
+        "specificHeat": 1000,
+        "mu": 10
+      },
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 26,
+        "verifiedOn": "2026-11-02"
+      },
+      "notes": "G: grueso (altura) de la pieza en mm, según la interpretación de Arqtherm de la tabla del CEC. Mortero de 1900 kg/m³. Válido para formato métrico y catalán."
+    },
+    {
+      "id": "cec-fab-lp-pie-80-100",
+      "name": "Fábrica de ladrillo perforado LP 1 pie (G 80–100 mm)",
+      "category": "ceramic",
+      "thermalResistance": 0.47,
+      "thicknessRangeMm": [
+        240,
+        280
+      ],
+      "unit": "m²·K/W",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.17.1 «Fábrica de ladrillo cerámico»",
+      "dataStatus": "reference-verified",
+      "valueType": "design-element-resistance",
+      "properties": {
+        "density": 1000,
+        "specificHeat": 1000,
+        "mu": 10
+      },
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 26,
+        "verifiedOn": "2026-11-02"
+      },
+      "notes": "G: grueso (altura) de la pieza en mm, según la interpretación de Arqtherm de la tabla del CEC. Mortero de 1900 kg/m³. Válido para formato métrico y catalán."
+    },
+    {
+      "id": "cec-fab-lm-medio",
+      "name": "Fábrica de ladrillo macizo LM ½ pie (G 40–50 mm)",
+      "category": "ceramic",
+      "thermalResistance": 0.12,
+      "thicknessRangeMm": [
+        115,
+        130
+      ],
+      "unit": "m²·K/W",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.17.1 «Fábrica de ladrillo cerámico»",
+      "dataStatus": "reference-verified",
+      "valueType": "design-element-resistance",
+      "properties": {
+        "density": 2170,
+        "specificHeat": 1000,
+        "mu": 10
+      },
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 26,
+        "verifiedOn": "2026-11-02"
+      },
+      "notes": "G: grueso (altura) de la pieza en mm, según la interpretación de Arqtherm de la tabla del CEC. Mortero de 1900 kg/m³. Válido para formato métrico y catalán."
+    },
+    {
+      "id": "cec-fab-lm-pie",
+      "name": "Fábrica de ladrillo macizo LM 1 pie (G 40–50 mm)",
+      "category": "ceramic",
+      "thermalResistance": 0.17,
+      "thicknessRangeMm": [
+        240,
+        280
+      ],
+      "unit": "m²·K/W",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.17.1 «Fábrica de ladrillo cerámico»",
+      "dataStatus": "reference-verified",
+      "valueType": "design-element-resistance",
+      "properties": {
+        "density": 2140,
+        "specificHeat": 1000,
+        "mu": 10
+      },
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 26,
+        "verifiedOn": "2026-11-02"
+      },
+      "notes": "G: grueso (altura) de la pieza en mm, según la interpretación de Arqtherm de la tabla del CEC. Mortero de 1900 kg/m³. Válido para formato métrico y catalán."
+    },
+    {
+      "id": "cec-fab-gf-sencillo",
+      "name": "Fábrica: tabique de LH sencillo gran formato GF",
+      "category": "ceramic",
+      "thermalResistance": 0.18,
+      "thicknessRangeMm": [
+        40,
+        60
+      ],
+      "unit": "m²·K/W",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.17.1 «Fábrica de ladrillo cerámico»",
+      "dataStatus": "reference-verified",
+      "valueType": "design-element-resistance",
+      "properties": {
+        "density": 670,
+        "specificHeat": 1000,
+        "mu": 10
+      },
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 26,
+        "verifiedOn": "2026-11-02"
+      },
+      "notes": "Incluye el panel prefabricado de cerámica y yeso."
+    },
+    {
+      "id": "cec-fab-gf-doble",
+      "name": "Fábrica: tabicón de LH doble gran formato GF",
+      "category": "ceramic",
+      "thermalResistance": 0.33,
+      "thicknessRangeMm": [
+        61,
+        90
+      ],
+      "unit": "m²·K/W",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.17.1 «Fábrica de ladrillo cerámico»",
+      "dataStatus": "reference-verified",
+      "valueType": "design-element-resistance",
+      "properties": {
+        "density": 630,
+        "specificHeat": 1000,
+        "mu": 10
+      },
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 26,
+        "verifiedOn": "2026-11-02"
+      },
+      "notes": "Incluye el panel prefabricado de cerámica y yeso."
+    },
+    {
+      "id": "cec-fab-gf-triple",
+      "name": "Fábrica: tabicón de LH triple gran formato GF",
+      "category": "ceramic",
+      "thermalResistance": 0.48,
+      "thicknessRangeMm": [
+        100,
+        110
+      ],
+      "unit": "m²·K/W",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.17.1 «Fábrica de ladrillo cerámico»",
+      "dataStatus": "reference-verified",
+      "valueType": "design-element-resistance",
+      "properties": {
+        "density": 620,
+        "specificHeat": 1000,
+        "mu": 10
+      },
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 26,
+        "verifiedOn": "2026-11-02"
+      },
+      "notes": "Incluye el panel prefabricado de cerámica y yeso."
+    },
+    {
+      "id": "cec-fab-bc-ais-140",
+      "name": "Fábrica de bloque cerámico aligerado 140 mm (mortero aislante)",
+      "category": "ceramic",
+      "thermalResistance": 0.44,
+      "thicknessRangeMm": [
+        140,
+        140
+      ],
+      "unit": "m²·K/W",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.17.3 «Fábrica de bloque cerámico aligerado»",
+      "dataStatus": "reference-verified",
+      "valueType": "design-element-resistance",
+      "properties": {
+        "density": 1020,
+        "specificHeat": 1000,
+        "mu": 10
+      },
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 27,
+        "verifiedOn": "2026-11-02"
+      },
+      "notes": "Mortero aislante de 1000 kg/m³."
+    },
+    {
+      "id": "cec-fab-bc-ais-190",
+      "name": "Fábrica de bloque cerámico aligerado 190 mm (mortero aislante)",
+      "category": "ceramic",
+      "thermalResistance": 0.63,
+      "thicknessRangeMm": [
+        190,
+        190
+      ],
+      "unit": "m²·K/W",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.17.3 «Fábrica de bloque cerámico aligerado»",
+      "dataStatus": "reference-verified",
+      "valueType": "design-element-resistance",
+      "properties": {
+        "density": 910,
+        "specificHeat": 1000,
+        "mu": 10
+      },
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 27,
+        "verifiedOn": "2026-11-02"
+      },
+      "notes": "Mortero aislante de 1000 kg/m³."
+    },
+    {
+      "id": "cec-fab-bc-ais-240",
+      "name": "Fábrica de bloque cerámico aligerado 240 mm (mortero aislante)",
+      "category": "ceramic",
+      "thermalResistance": 0.81,
+      "thicknessRangeMm": [
+        240,
+        240
+      ],
+      "unit": "m²·K/W",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.17.3 «Fábrica de bloque cerámico aligerado»",
+      "dataStatus": "reference-verified",
+      "valueType": "design-element-resistance",
+      "properties": {
+        "density": 920,
+        "specificHeat": 1000,
+        "mu": 10
+      },
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 27,
+        "verifiedOn": "2026-11-02"
+      },
+      "notes": "Mortero aislante de 1000 kg/m³."
+    },
+    {
+      "id": "cec-fab-bc-ais-290",
+      "name": "Fábrica de bloque cerámico aligerado 290 mm (mortero aislante)",
+      "category": "ceramic",
+      "thermalResistance": 0.98,
+      "thicknessRangeMm": [
+        290,
+        290
+      ],
+      "unit": "m²·K/W",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.17.3 «Fábrica de bloque cerámico aligerado»",
+      "dataStatus": "reference-verified",
+      "valueType": "design-element-resistance",
+      "properties": {
+        "density": 910,
+        "specificHeat": 1000,
+        "mu": 10
+      },
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 27,
+        "verifiedOn": "2026-11-02"
+      },
+      "notes": "Mortero aislante de 1000 kg/m³."
+    },
+    {
+      "id": "cec-fab-bc-140",
+      "name": "Fábrica de bloque cerámico aligerado 140 mm (mortero convencional)",
+      "category": "ceramic",
+      "thermalResistance": 0.32,
+      "thicknessRangeMm": [
+        140,
+        140
+      ],
+      "unit": "m²·K/W",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.17.3 «Fábrica de bloque cerámico aligerado»",
+      "dataStatus": "reference-verified",
+      "valueType": "design-element-resistance",
+      "properties": {
+        "density": 1170,
+        "mu": 10
+      },
+      "notes": "Mortero convencional ρ = 1900 kg/m³.",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 27,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-fab-bc-190",
+      "name": "Fábrica de bloque cerámico aligerado 190 mm (mortero convencional)",
+      "category": "ceramic",
+      "thermalResistance": 0.44,
+      "thicknessRangeMm": [
+        190,
+        190
+      ],
+      "unit": "m²·K/W",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.17.3 «Fábrica de bloque cerámico aligerado»",
+      "dataStatus": "reference-verified",
+      "valueType": "design-element-resistance",
+      "properties": {
+        "density": 1080,
+        "mu": 10
+      },
+      "notes": "Mortero convencional ρ = 1900 kg/m³.",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 27,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-fab-bc-240",
+      "name": "Fábrica de bloque cerámico aligerado 240 mm (mortero convencional)",
+      "category": "ceramic",
+      "thermalResistance": 0.57,
+      "thicknessRangeMm": [
+        240,
+        240
+      ],
+      "unit": "m²·K/W",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.17.3 «Fábrica de bloque cerámico aligerado»",
+      "dataStatus": "reference-verified",
+      "valueType": "design-element-resistance",
+      "properties": {
+        "density": 1090,
+        "mu": 10
+      },
+      "notes": "Mortero convencional ρ = 1900 kg/m³.",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 27,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-fab-bc-290",
+      "name": "Fábrica de bloque cerámico aligerado 290 mm (mortero convencional)",
+      "category": "ceramic",
+      "thermalResistance": 0.68,
+      "thicknessRangeMm": [
+        290,
+        290
+      ],
+      "unit": "m²·K/W",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.17.3 «Fábrica de bloque cerámico aligerado»",
+      "dataStatus": "reference-verified",
+      "valueType": "design-element-resistance",
+      "properties": {
+        "density": 1080,
+        "mu": 10
+      },
+      "notes": "Mortero convencional ρ = 1900 kg/m³.",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 27,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-baldosa-ceramica",
+      "name": "Plaqueta o baldosa cerámica",
+      "category": "ceramic",
+      "thermalConductivity": 1.0,
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.14 «Productos cerámicos»",
+      "dataStatus": "reference-verified",
+      "valueType": "design",
+      "properties": {
+        "density": 2000,
+        "specificHeat": 800,
+        "mu": 30
+      },
+      "notes": "",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 24,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-baldosa-gres",
+      "name": "Plaqueta o baldosa de gres",
+      "category": "ceramic",
+      "thermalConductivity": 2.3,
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.14 «Productos cerámicos»",
+      "dataStatus": "reference-verified",
+      "valueType": "design",
+      "properties": {
+        "density": 2500,
+        "specificHeat": 1000,
+        "mu": 30
+      },
+      "notes": "",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 24,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-azulejo",
+      "name": "Azulejo cerámico",
+      "category": "ceramic",
+      "thermalConductivity": 1.3,
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.14 «Productos cerámicos»",
+      "dataStatus": "reference-verified",
+      "valueType": "design",
+      "properties": {
+        "density": 2300,
+        "specificHeat": 840,
+        "muInfinite": true
+      },
+      "notes": "",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 24,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-teja-arcilla",
+      "name": "Teja de arcilla cocida",
+      "category": "ceramic",
+      "thermalConductivity": 1.0,
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.14 «Productos cerámicos»",
+      "dataStatus": "reference-verified",
+      "valueType": "design",
+      "properties": {
+        "density": 2000,
+        "specificHeat": 800,
+        "mu": 30
+      },
+      "notes": "",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 24,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-ha-2300-2500",
+      "name": "Hormigón armado (2300 < ρ ≤ 2500 kg/m³)",
+      "category": "concrete",
+      "thermalConductivity": 2.3,
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.4.1 «Hormigones»",
+      "dataStatus": "reference-verified",
+      "valueType": "design",
+      "properties": {
+        "densityRange": [
+          2300,
+          2500
+        ],
+        "specificHeat": 1000,
+        "mu": 80
+      },
+      "notes": "",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 17,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-ha-2500",
+      "name": "Hormigón armado (ρ > 2500 kg/m³)",
+      "category": "concrete",
+      "thermalConductivity": 2.5,
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.4.1 «Hormigones»",
+      "dataStatus": "reference-verified",
+      "valueType": "design",
+      "properties": {
+        "specificHeat": 1000,
+        "mu": 80
+      },
+      "notes": "",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 17,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-hm-2000-2300",
+      "name": "Hormigón en masa (2000 ≤ ρ ≤ 2300 kg/m³)",
+      "category": "concrete",
+      "thermalConductivity": 1.65,
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.4.1 «Hormigones»",
+      "dataStatus": "reference-verified",
+      "valueType": "design",
+      "properties": {
+        "densityRange": [
+          2000,
+          2300
+        ],
+        "specificHeat": 1000,
+        "mu": 70
+      },
+      "notes": "",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 17,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-hm-2300-2600",
+      "name": "Hormigón en masa (2300 ≤ ρ ≤ 2600 kg/m³)",
+      "category": "concrete",
+      "thermalConductivity": 2.0,
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.4.1 «Hormigones»",
+      "dataStatus": "reference-verified",
+      "valueType": "design",
+      "properties": {
+        "densityRange": [
+          2300,
+          2600
+        ],
+        "specificHeat": 1000,
+        "mu": 80
+      },
+      "notes": "",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 17,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-hal-1600-1800",
+      "name": "Hormigón con áridos ligeros (1600 ≤ ρ ≤ 1800 kg/m³)",
+      "category": "concrete",
+      "thermalConductivity": 1.15,
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.4.1 «Hormigones»",
+      "dataStatus": "reference-verified",
+      "valueType": "design",
+      "properties": {
+        "densityRange": [
+          1600,
+          1800
+        ],
+        "specificHeat": 1000,
+        "mu": 60
+      },
+      "notes": "",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 17,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-hca-500",
+      "name": "Hormigón celular curado en autoclave (ρ = 500 kg/m³)",
+      "category": "concrete",
+      "thermalConductivity": 0.14,
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.4.2 «Hormigones para piezas prefabricadas»",
+      "dataStatus": "reference-verified",
+      "valueType": "design",
+      "properties": {
+        "density": 500,
+        "specificHeat": 1000,
+        "mu": 6
+      },
+      "notes": "Valor de diseño para piezas prefabricadas (percentil 90 %, Fm = 1,11).",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 18,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-hca-600",
+      "name": "Hormigón celular curado en autoclave (ρ = 600 kg/m³)",
+      "category": "concrete",
+      "thermalConductivity": 0.18,
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.4.2 «Hormigones para piezas prefabricadas»",
+      "dataStatus": "reference-verified",
+      "valueType": "design",
+      "properties": {
+        "density": 600,
+        "specificHeat": 1000,
+        "mu": 6
+      },
+      "notes": "Valor de diseño para piezas prefabricadas (percentil 90 %, Fm = 1,11).",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 18,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-mortero-1800-2000",
+      "name": "Mortero de cemento o cal (1800 < ρ ≤ 2000 kg/m³)",
+      "category": "concrete",
+      "thermalConductivity": 1.3,
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.5 «Morteros»",
+      "dataStatus": "reference-verified",
+      "valueType": "design",
+      "properties": {
+        "densityRange": [
+          1800,
+          2000
+        ],
+        "specificHeat": 1000,
+        "mu": 10
+      },
+      "notes": "Para mortero colocado in situ el CEC considera ρ = 1900 kg/m³.",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 19,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-mortero-1600-1800",
+      "name": "Mortero de cemento o cal (1600 < ρ ≤ 1800 kg/m³)",
+      "category": "concrete",
+      "thermalConductivity": 1.0,
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.5 «Morteros»",
+      "dataStatus": "reference-verified",
+      "valueType": "design",
+      "properties": {
+        "densityRange": [
+          1600,
+          1800
+        ],
+        "specificHeat": 1000,
+        "mu": 10
+      },
+      "notes": "",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 19,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-mortero-ligero",
+      "name": "Mortero de áridos ligeros (vermiculita, perlita)",
+      "category": "concrete",
+      "thermalConductivity": 0.41,
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.5 «Morteros»",
+      "dataStatus": "reference-verified",
+      "valueType": "design",
+      "properties": {
+        "specificHeat": 1000,
+        "mu": 10
+      },
+      "notes": "ρ ≤ 1000 kg/m³.",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 19,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-granito",
+      "name": "Granito",
+      "category": "stone",
+      "thermalConductivity": 2.8,
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.1.1 «Rocas y suelos naturales»",
+      "dataStatus": "reference-verified",
+      "valueType": "design",
+      "properties": {
+        "densityRange": [
+          2500,
+          2700
+        ],
+        "specificHeat": 1000,
+        "mu": 10000
+      },
+      "notes": "Incluye el efecto de las posibles juntas.",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 14,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-marmol",
+      "name": "Mármol",
+      "category": "stone",
+      "thermalConductivity": 3.5,
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.1.1 «Rocas y suelos naturales»",
+      "dataStatus": "reference-verified",
+      "valueType": "design",
+      "properties": {
+        "densityRange": [
+          2600,
+          2800
+        ],
+        "specificHeat": 1000,
+        "mu": 10000
+      },
+      "notes": "Incluye el efecto de las posibles juntas.",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 14,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-caliza-dura",
+      "name": "Caliza dura",
+      "category": "stone",
+      "thermalConductivity": 1.7,
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.1.1 «Rocas y suelos naturales»",
+      "dataStatus": "reference-verified",
+      "valueType": "design",
+      "properties": {
+        "densityRange": [
+          2000,
+          2190
+        ],
+        "specificHeat": 1000,
+        "mu": 150
+      },
+      "notes": "Incluye el efecto de las posibles juntas.",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 14,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-caliza-media",
+      "name": "Caliza de dureza media",
+      "category": "stone",
+      "thermalConductivity": 1.4,
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.1.1 «Rocas y suelos naturales»",
+      "dataStatus": "reference-verified",
+      "valueType": "design",
+      "properties": {
+        "densityRange": [
+          1800,
+          1990
+        ],
+        "specificHeat": 1000,
+        "mu": 40
+      },
+      "notes": "Incluye el efecto de las posibles juntas.",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 14,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-arenisca",
+      "name": "Arenisca",
+      "category": "stone",
+      "thermalConductivity": 3.0,
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.1.1 «Rocas y suelos naturales»",
+      "dataStatus": "reference-verified",
+      "valueType": "design",
+      "properties": {
+        "densityRange": [
+          2200,
+          2600
+        ]
+      },
+      "notes": "Incluye el efecto de las posibles juntas.",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 14,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-pizarra",
+      "name": "Esquisto, pizarra",
+      "category": "stone",
+      "thermalConductivity": 2.2,
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.1.1 «Rocas y suelos naturales»",
+      "dataStatus": "reference-verified",
+      "valueType": "design",
+      "properties": {
+        "densityRange": [
+          2000,
+          2800
+        ],
+        "specificHeat": 1000,
+        "mu": 800
+      },
+      "notes": "Incluye el efecto de las posibles juntas.",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 14,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-conifera-media",
+      "name": "Madera conífera de peso medio (435 < ρ ≤ 520 kg/m³)",
+      "category": "timber",
+      "thermalConductivity": 0.15,
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.3.1 «Maderas»",
+      "dataStatus": "reference-verified",
+      "valueType": "design",
+      "properties": {
+        "densityRange": [
+          435,
+          520
+        ],
+        "specificHeat": 1600,
+        "mu": 20
+      },
+      "notes": "Densidad a 20 °C y 65 % HR (no densidad seca).",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 16,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-frondosa-media",
+      "name": "Madera frondosa de peso medio (565 < ρ ≤ 750 kg/m³)",
+      "category": "timber",
+      "thermalConductivity": 0.18,
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.3.1 «Maderas»",
+      "dataStatus": "reference-verified",
+      "valueType": "design",
+      "properties": {
+        "densityRange": [
+          565,
+          750
+        ],
+        "specificHeat": 1600,
+        "mu": 50
+      },
+      "notes": "Densidad a 20 °C y 65 % HR (no densidad seca).",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 16,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-osb",
+      "name": "Tablero de virutas orientadas (OSB)",
+      "category": "timber",
+      "thermalConductivity": 0.13,
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.3.2 «Paneles de madera»",
+      "dataStatus": "reference-verified",
+      "valueType": "design",
+      "properties": {
+        "densityMax": 650,
+        "specificHeat": 1700,
+        "mu": 30
+      },
+      "notes": "ρ ≤ 650 kg/m³.",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 16,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-contrachapado-450-500",
+      "name": "Tablero contrachapado (450 < ρ ≤ 500 kg/m³)",
+      "category": "timber",
+      "thermalConductivity": 0.15,
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.3.2 «Paneles de madera»",
+      "dataStatus": "reference-verified",
+      "valueType": "design",
+      "properties": {
+        "densityRange": [
+          450,
+          500
+        ],
+        "specificHeat": 1600,
+        "mu": 70
+      },
+      "notes": "",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 16,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-particulas-640-820",
+      "name": "Tablero de partículas (640 < ρ ≤ 820 kg/m³)",
+      "category": "timber",
+      "thermalConductivity": 0.18,
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.3.2 «Paneles de madera»",
+      "dataStatus": "reference-verified",
+      "valueType": "design",
+      "properties": {
+        "densityRange": [
+          640,
+          820
+        ],
+        "specificHeat": 1700,
+        "mu": 20
+      },
+      "notes": "",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 16,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-mdf-550-750",
+      "name": "Tablero de fibras MDF (550 < ρ ≤ 750 kg/m³)",
+      "category": "timber",
+      "thermalConductivity": 0.18,
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.3.2 «Paneles de madera»",
+      "dataStatus": "reference-verified",
+      "valueType": "design",
+      "properties": {
+        "densityRange": [
+          550,
+          750
+        ],
+        "specificHeat": 1700,
+        "mu": 20
+      },
+      "notes": "",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 16,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-enlucido-yeso-1000-1300",
+      "name": "Enlucido de yeso (1000 ≤ ρ ≤ 1300 kg/m³)",
+      "category": "gypsum",
+      "thermalConductivity": 0.57,
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.7 «Enlucidos»",
+      "dataStatus": "reference-verified",
+      "valueType": "design",
+      "properties": {
+        "densityRange": [
+          1000,
+          1300
+        ],
+        "specificHeat": 1000,
+        "mu": 6
+      },
+      "notes": "",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 20,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-enlucido-yeso-1000",
+      "name": "Enlucido de yeso (ρ ≤ 1000 kg/m³)",
+      "category": "gypsum",
+      "thermalConductivity": 0.4,
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.7 «Enlucidos»",
+      "dataStatus": "reference-verified",
+      "valueType": "design",
+      "properties": {
+        "densityMax": 1000,
+        "specificHeat": 1000,
+        "mu": 6
+      },
+      "notes": "",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 20,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-pyl",
+      "name": "Placa de yeso laminado (PYL)",
+      "category": "gypsum",
+      "thermalConductivity": 0.25,
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.6.2 «Productos de yeso»",
+      "dataStatus": "reference-verified",
+      "valueType": "design",
+      "properties": {
+        "densityRange": [
+          750,
+          900
+        ],
+        "specificHeat": 1000,
+        "mu": 4
+      },
+      "notes": "Incluye el efecto del revestimiento de papel.",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 20,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-yeso-media",
+      "name": "Yeso de dureza media (600 < ρ ≤ 900 kg/m³)",
+      "category": "gypsum",
+      "thermalConductivity": 0.3,
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.6.1 «Yesos»",
+      "dataStatus": "reference-verified",
+      "valueType": "design",
+      "properties": {
+        "densityRange": [
+          600,
+          900
+        ],
+        "specificHeat": 1000,
+        "mu": 4
+      },
+      "notes": "",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 20,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "air-unventilated",
+      "name": "Cámara de aire sin ventilar",
+      "category": "air",
+      "airCavity": "unventilated",
+      "unit": "m²·K/W",
+      "sourceId": "DA-DB-HE-1",
+      "sourceRef": "DA DB-HE/1 (enero 2020), apartado 2.1.1 a) y tabla 2",
+      "dataStatus": "reference-verified",
+      "valueType": "cavity-procedure",
+      "notes": "Resistencia según el espesor (10–50 mm, interpolación lineal) y la orientación de la cámara. Aberturas ≤ 500 mm² por m (vertical) o por m² (horizontal)."
+    },
+    {
+      "id": "air-slightly",
+      "name": "Cámara de aire ligeramente ventilada",
+      "category": "air",
+      "airCavity": "slightly",
+      "unit": "m²·K/W",
+      "sourceId": "DA-DB-HE-1",
+      "sourceRef": "DA DB-HE/1 (enero 2020), apartado 2.1.1 b)",
+      "dataStatus": "reference-verified",
+      "valueType": "cavity-procedure",
+      "notes": "Mitad de los valores de la tabla 2. Aberturas entre 500 y 1500 mm² por m (vertical) o por m² (horizontal)."
+    },
+    {
+      "id": "air-very",
+      "name": "Cámara de aire muy ventilada",
+      "category": "air",
+      "airCavity": "very",
+      "unit": "m²·K/W",
+      "sourceId": "DA-DB-HE-1",
+      "sourceRef": "DA DB-HE/1 (enero 2020), apartado 2.1.1 c)",
+      "dataStatus": "reference-verified",
+      "valueType": "cavity-procedure",
+      "notes": "Se desprecian la cámara y las capas exteriores a ella; Rse se toma igual a Rsi. Aberturas > 1500 mm²."
+    },
+    {
+      "id": "cec-acero",
+      "name": "Acero",
+      "category": "other",
+      "thermalConductivity": 50,
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.2 «Metales»",
+      "dataStatus": "reference-verified",
+      "valueType": "design",
+      "properties": {
+        "density": 7800,
+        "specificHeat": 450,
+        "muInfinite": true
+      },
+      "notes": "",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 15,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-aluminio",
+      "name": "Aluminio",
+      "category": "other",
+      "thermalConductivity": 230,
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.2 «Metales»",
+      "dataStatus": "reference-verified",
+      "valueType": "design",
+      "properties": {
+        "density": 2700,
+        "specificHeat": 880,
+        "muInfinite": true
+      },
+      "notes": "",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 15,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-betun-lamina",
+      "name": "Betún, fieltro o lámina",
+      "category": "other",
+      "thermalConductivity": 0.23,
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.12 «Bituminosos»",
+      "dataStatus": "reference-verified",
+      "valueType": "design",
+      "properties": {
+        "density": 1100,
+        "specificHeat": 1000,
+        "mu": 50000
+      },
+      "notes": "",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 23,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-pvc",
+      "name": "Cloruro de polivinilo (PVC)",
+      "category": "other",
+      "thermalConductivity": 0.17,
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.9.1 «Plásticos»",
+      "dataStatus": "reference-verified",
+      "valueType": "design",
+      "properties": {
+        "density": 1390,
+        "specificHeat": 900,
+        "mu": 50000
+      },
+      "notes": "",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 22,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-hdpe",
+      "name": "Polietileno de alta densidad (HDPE)",
+      "category": "other",
+      "thermalConductivity": 0.5,
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.9.1 «Plásticos»",
+      "dataStatus": "reference-verified",
+      "valueType": "design",
+      "properties": {
+        "density": 980,
+        "specificHeat": 1800,
+        "mu": 100000
+      },
+      "notes": "",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 22,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-vidrio",
+      "name": "Vidrio sodocálcico (flotado)",
+      "category": "other",
+      "thermalConductivity": 1.0,
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.15.1 «Vidrios»",
+      "dataStatus": "reference-verified",
+      "valueType": "design",
+      "properties": {
+        "density": 2500,
+        "specificHeat": 750,
+        "muInfinite": true
+      },
+      "notes": "Material. No sirve para calcular la transmitancia de huecos.",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 25,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-arena-grava",
+      "name": "Arena y grava",
+      "category": "other",
+      "thermalConductivity": 2.0,
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.1.1 «Rocas y suelos naturales»",
+      "dataStatus": "reference-verified",
+      "valueType": "design",
+      "properties": {
+        "densityRange": [
+          1700,
+          2200
+        ],
+        "mu": 50
+      },
+      "notes": "",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 14,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "cec-tierra-vegetal",
+      "name": "Tierra vegetal",
+      "category": "other",
+      "thermalConductivity": 0.52,
+      "unit": "W/(m·K)",
+      "sourceId": "CEC-6.3",
+      "sourceRef": "CEC v6.3, apartado 3.1.1 «Rocas y suelos naturales»",
+      "dataStatus": "reference-verified",
+      "valueType": "design",
+      "properties": {
+        "densityMax": 2050,
+        "specificHeat": 1840
+      },
+      "notes": "",
+      "verification": {
+        "document": "CEC v6.3 (marzo 2010)",
+        "page": 14,
+        "verifiedOn": "2026-11-02"
+      }
+    },
+    {
+      "id": "placa-cemento",
+      "name": "Placa de cemento",
+      "category": "other",
+      "thermalConductivity": 0.35,
+      "unit": "W/(m·K)",
+      "sourceId": "MFR-PLACA-CEMENTO",
+      "sourceRef": "Valores declarados por el fabricante de una placa de cemento para exteriores: λ = 0,35 W/(m·K), μ = 66",
+      "dataStatus": "reference-pending-check",
+      "valueType": "declared",
+      "notes": "Placa de cemento para exteriores. Valores declarados por un fabricante, pendientes de cotejo con la ficha técnica; sustitúyalos por los del producto de su proyecto.",
+      "properties": {
+        "mu": 66
+      }
+    },
+    {
+      "id": "lamina-impermeable-transpirable",
+      "name": "Lámina impermeable transpirable",
+      "category": "other",
+      "thermalConductivity": 0.5,
+      "unit": "W/(m·K)",
+      "sourceId": "AUTOR-ARQTHERM",
+      "sourceRef": "Lámina impermeable transpirable: λ = 0,5 W/(m·K) y Sd = 0,02 m con 0,5 mm (μ = 40), valores indicados por el autor",
+      "dataStatus": "reference-pending-check",
+      "valueType": "declared",
+      "notes": "Lámina impermeable al agua y abierta al vapor, colocada en la cara fría. Su resistencia térmica es despreciable. μ = Sd / e = 0,02 m / 0,0005 m = 40; si cambia el espesor, ajuste μ para conservar el Sd del producto.",
+      "properties": {
+        "mu": 40
+      }
+    }
+  ]
+}

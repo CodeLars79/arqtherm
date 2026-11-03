@@ -1,0 +1,1233 @@
+{
+  "tableId": "HE-AnejoB-a",
+  "title": "Tabla a-Anejo B. Zonas climáticas",
+  "document": "CTE DB-HE",
+  "documentVersion": "Texto consolidado RD 450/2022 (junio 2022)",
+  "status": "reference-verified",
+  "notes": [
+    "Zona climática = letra de invierno (α, A–E) + número de verano (1–4), en función de la provincia y de la altitud de la localidad sobre el nivel del mar.",
+    "Los límites de cada tramo de altitud son inclusivos (m).",
+    "La tabla oficial rotula una columna como «111 - 200 m»; por su posición entre 101–150 y 201–250 se lee como 151–200 m.",
+    "Las comunidades autónomas pueden aprobar documentos que asignen zonas climáticas a sus municipios; en tal caso prevalecen sobre esta tabla.",
+    "La zona de la capital se obtiene aplicando esta tabla a la altitud de referencia de la capital (tabla B.1 del DB-HE 2013). Sirve solo para colorear el mapa."
+  ],
+  "sources": [
+    {
+      "label": "CTE DB-HE (consolidado, junio 2022), Anejo B, tabla a-Anejo B, pág. 46",
+      "url": "https://www.codigotecnico.org/pdf/Documentos/HE/DBHE.pdf"
+    },
+    {
+      "label": "Altitudes de referencia de las capitales, DB-HE 2013 tabla B.1 (COAC)",
+      "url": "https://www.arquitectes.cat/ca/system/files/oct/he_1_zones_clim.pdf"
+    }
+  ],
+  "provinces": [
+    {
+      "ineCode": "02",
+      "name": "Albacete",
+      "capital": "Albacete",
+      "capitalReferenceAltitudeM": 677,
+      "bands": [
+        {
+          "zone": "C3",
+          "minM": null,
+          "maxM": 450
+        },
+        {
+          "zone": "D3",
+          "minM": 451,
+          "maxM": 950
+        },
+        {
+          "zone": "E1",
+          "minM": 951,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "03",
+      "name": "Alicante/Alacant",
+      "capital": "Alicante/Alacant",
+      "capitalReferenceAltitudeM": 7,
+      "bands": [
+        {
+          "zone": "B4",
+          "minM": null,
+          "maxM": 250
+        },
+        {
+          "zone": "C3",
+          "minM": 251,
+          "maxM": 700
+        },
+        {
+          "zone": "D3",
+          "minM": 701,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "04",
+      "name": "Almería",
+      "capital": "Almería",
+      "capitalReferenceAltitudeM": 0,
+      "bands": [
+        {
+          "zone": "A4",
+          "minM": null,
+          "maxM": 100
+        },
+        {
+          "zone": "B4",
+          "minM": 101,
+          "maxM": 250
+        },
+        {
+          "zone": "B3",
+          "minM": 251,
+          "maxM": 400
+        },
+        {
+          "zone": "C3",
+          "minM": 401,
+          "maxM": 800
+        },
+        {
+          "zone": "D3",
+          "minM": 801,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "01",
+      "name": "Araba/Álava",
+      "capital": "Vitoria-Gasteiz",
+      "capitalReferenceAltitudeM": 512,
+      "bands": [
+        {
+          "zone": "D1",
+          "minM": null,
+          "maxM": 600
+        },
+        {
+          "zone": "E1",
+          "minM": 601,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "33",
+      "name": "Asturias",
+      "capital": "Oviedo",
+      "capitalReferenceAltitudeM": 214,
+      "bands": [
+        {
+          "zone": "C1",
+          "minM": null,
+          "maxM": 50
+        },
+        {
+          "zone": "D1",
+          "minM": 51,
+          "maxM": 550
+        },
+        {
+          "zone": "E1",
+          "minM": 551,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "05",
+      "name": "Ávila",
+      "capital": "Ávila",
+      "capitalReferenceAltitudeM": 1054,
+      "bands": [
+        {
+          "zone": "D2",
+          "minM": null,
+          "maxM": 550
+        },
+        {
+          "zone": "D1",
+          "minM": 551,
+          "maxM": 850
+        },
+        {
+          "zone": "E1",
+          "minM": 851,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "06",
+      "name": "Badajoz",
+      "capital": "Badajoz",
+      "capitalReferenceAltitudeM": 168,
+      "bands": [
+        {
+          "zone": "C4",
+          "minM": null,
+          "maxM": 400
+        },
+        {
+          "zone": "C3",
+          "minM": 401,
+          "maxM": 450
+        },
+        {
+          "zone": "D3",
+          "minM": 451,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "08",
+      "name": "Barcelona",
+      "capital": "Barcelona",
+      "capitalReferenceAltitudeM": 1,
+      "bands": [
+        {
+          "zone": "C2",
+          "minM": null,
+          "maxM": 250
+        },
+        {
+          "zone": "D2",
+          "minM": 251,
+          "maxM": 450
+        },
+        {
+          "zone": "D1",
+          "minM": 451,
+          "maxM": 750
+        },
+        {
+          "zone": "E1",
+          "minM": 751,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "48",
+      "name": "Bizkaia",
+      "capital": "Bilbao",
+      "capitalReferenceAltitudeM": 214,
+      "bands": [
+        {
+          "zone": "C1",
+          "minM": null,
+          "maxM": 250
+        },
+        {
+          "zone": "D1",
+          "minM": 251,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "09",
+      "name": "Burgos",
+      "capital": "Burgos",
+      "capitalReferenceAltitudeM": 861,
+      "bands": [
+        {
+          "zone": "D1",
+          "minM": null,
+          "maxM": 600
+        },
+        {
+          "zone": "E1",
+          "minM": 601,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "10",
+      "name": "Cáceres",
+      "capital": "Cáceres",
+      "capitalReferenceAltitudeM": 385,
+      "bands": [
+        {
+          "zone": "C4",
+          "minM": null,
+          "maxM": 600
+        },
+        {
+          "zone": "D3",
+          "minM": 601,
+          "maxM": 1050
+        },
+        {
+          "zone": "E1",
+          "minM": 1051,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "11",
+      "name": "Cádiz",
+      "capital": "Cádiz",
+      "capitalReferenceAltitudeM": 0,
+      "bands": [
+        {
+          "zone": "A3",
+          "minM": null,
+          "maxM": 150
+        },
+        {
+          "zone": "B3",
+          "minM": 151,
+          "maxM": 450
+        },
+        {
+          "zone": "C3",
+          "minM": 451,
+          "maxM": 600
+        },
+        {
+          "zone": "C2",
+          "minM": 601,
+          "maxM": 850
+        },
+        {
+          "zone": "D2",
+          "minM": 851,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "39",
+      "name": "Cantabria",
+      "capital": "Santander",
+      "capitalReferenceAltitudeM": 1,
+      "bands": [
+        {
+          "zone": "C1",
+          "minM": null,
+          "maxM": 150
+        },
+        {
+          "zone": "D1",
+          "minM": 151,
+          "maxM": 650
+        },
+        {
+          "zone": "E1",
+          "minM": 651,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "12",
+      "name": "Castellón/Castelló",
+      "capital": "Castellón de la Plana",
+      "capitalReferenceAltitudeM": 18,
+      "bands": [
+        {
+          "zone": "B3",
+          "minM": null,
+          "maxM": 100
+        },
+        {
+          "zone": "C3",
+          "minM": 101,
+          "maxM": 500
+        },
+        {
+          "zone": "D3",
+          "minM": 501,
+          "maxM": 600
+        },
+        {
+          "zone": "D2",
+          "minM": 601,
+          "maxM": 1000
+        },
+        {
+          "zone": "E1",
+          "minM": 1001,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "51",
+      "name": "Ceuta",
+      "capital": "Ceuta",
+      "capitalReferenceAltitudeM": 0,
+      "bands": [
+        {
+          "zone": "B3",
+          "minM": null,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "13",
+      "name": "Ciudad Real",
+      "capital": "Ciudad Real",
+      "capitalReferenceAltitudeM": 630,
+      "bands": [
+        {
+          "zone": "C4",
+          "minM": null,
+          "maxM": 450
+        },
+        {
+          "zone": "C3",
+          "minM": 451,
+          "maxM": 500
+        },
+        {
+          "zone": "D3",
+          "minM": 501,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "14",
+      "name": "Córdoba",
+      "capital": "Córdoba",
+      "capitalReferenceAltitudeM": 113,
+      "bands": [
+        {
+          "zone": "B4",
+          "minM": null,
+          "maxM": 150
+        },
+        {
+          "zone": "C4",
+          "minM": 151,
+          "maxM": 550
+        },
+        {
+          "zone": "D3",
+          "minM": 551,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "15",
+      "name": "Coruña, A",
+      "capital": "A Coruña",
+      "capitalReferenceAltitudeM": 0,
+      "bands": [
+        {
+          "zone": "C1",
+          "minM": null,
+          "maxM": 200
+        },
+        {
+          "zone": "D1",
+          "minM": 201,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "16",
+      "name": "Cuenca",
+      "capital": "Cuenca",
+      "capitalReferenceAltitudeM": 975,
+      "bands": [
+        {
+          "zone": "D3",
+          "minM": null,
+          "maxM": 800
+        },
+        {
+          "zone": "D2",
+          "minM": 801,
+          "maxM": 1050
+        },
+        {
+          "zone": "E1",
+          "minM": 1051,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "20",
+      "name": "Gipuzkoa",
+      "capital": "Donostia/San Sebastián",
+      "capitalReferenceAltitudeM": 5,
+      "bands": [
+        {
+          "zone": "D1",
+          "minM": null,
+          "maxM": 400
+        },
+        {
+          "zone": "E1",
+          "minM": 401,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "17",
+      "name": "Girona",
+      "capital": "Girona",
+      "capitalReferenceAltitudeM": 143,
+      "bands": [
+        {
+          "zone": "C2",
+          "minM": null,
+          "maxM": 100
+        },
+        {
+          "zone": "D2",
+          "minM": 101,
+          "maxM": 600
+        },
+        {
+          "zone": "E1",
+          "minM": 601,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "18",
+      "name": "Granada",
+      "capital": "Granada",
+      "capitalReferenceAltitudeM": 754,
+      "bands": [
+        {
+          "zone": "A4",
+          "minM": null,
+          "maxM": 50
+        },
+        {
+          "zone": "B4",
+          "minM": 51,
+          "maxM": 350
+        },
+        {
+          "zone": "C4",
+          "minM": 351,
+          "maxM": 600
+        },
+        {
+          "zone": "C3",
+          "minM": 601,
+          "maxM": 800
+        },
+        {
+          "zone": "D3",
+          "minM": 801,
+          "maxM": 1300
+        },
+        {
+          "zone": "E1",
+          "minM": 1301,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "19",
+      "name": "Guadalajara",
+      "capital": "Guadalajara",
+      "capitalReferenceAltitudeM": 708,
+      "bands": [
+        {
+          "zone": "D3",
+          "minM": null,
+          "maxM": 950
+        },
+        {
+          "zone": "D2",
+          "minM": 951,
+          "maxM": 1000
+        },
+        {
+          "zone": "E1",
+          "minM": 1001,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "21",
+      "name": "Huelva",
+      "capital": "Huelva",
+      "capitalReferenceAltitudeM": 50,
+      "bands": [
+        {
+          "zone": "A4",
+          "minM": null,
+          "maxM": 50
+        },
+        {
+          "zone": "B4",
+          "minM": 51,
+          "maxM": 150
+        },
+        {
+          "zone": "B3",
+          "minM": 151,
+          "maxM": 350
+        },
+        {
+          "zone": "C3",
+          "minM": 351,
+          "maxM": 800
+        },
+        {
+          "zone": "D3",
+          "minM": 801,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "22",
+      "name": "Huesca",
+      "capital": "Huesca",
+      "capitalReferenceAltitudeM": 432,
+      "bands": [
+        {
+          "zone": "C3",
+          "minM": null,
+          "maxM": 200
+        },
+        {
+          "zone": "D3",
+          "minM": 201,
+          "maxM": 400
+        },
+        {
+          "zone": "D2",
+          "minM": 401,
+          "maxM": 700
+        },
+        {
+          "zone": "E1",
+          "minM": 701,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "07",
+      "name": "Illes Balears",
+      "capital": "Palma",
+      "capitalReferenceAltitudeM": 1,
+      "bands": [
+        {
+          "zone": "B3",
+          "minM": null,
+          "maxM": 250
+        },
+        {
+          "zone": "C3",
+          "minM": 251,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "23",
+      "name": "Jaén",
+      "capital": "Jaén",
+      "capitalReferenceAltitudeM": 436,
+      "bands": [
+        {
+          "zone": "B4",
+          "minM": null,
+          "maxM": 350
+        },
+        {
+          "zone": "C4",
+          "minM": 351,
+          "maxM": 750
+        },
+        {
+          "zone": "D3",
+          "minM": 751,
+          "maxM": 1250
+        },
+        {
+          "zone": "E1",
+          "minM": 1251,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "26",
+      "name": "La Rioja",
+      "capital": "Logroño",
+      "capitalReferenceAltitudeM": 379,
+      "bands": [
+        {
+          "zone": "C2",
+          "minM": null,
+          "maxM": 200
+        },
+        {
+          "zone": "D2",
+          "minM": 201,
+          "maxM": 700
+        },
+        {
+          "zone": "E1",
+          "minM": 701,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "35",
+      "name": "Las Palmas",
+      "capital": "Las Palmas de Gran Canaria",
+      "capitalReferenceAltitudeM": 114,
+      "bands": [
+        {
+          "zone": "α3",
+          "minM": null,
+          "maxM": 350
+        },
+        {
+          "zone": "A2",
+          "minM": 351,
+          "maxM": 750
+        },
+        {
+          "zone": "B2",
+          "minM": 751,
+          "maxM": 1000
+        },
+        {
+          "zone": "C2",
+          "minM": 1001,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "24",
+      "name": "León",
+      "capital": "León",
+      "capitalReferenceAltitudeM": 346,
+      "bands": [
+        {
+          "zone": "E1",
+          "minM": null,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "25",
+      "name": "Lleida",
+      "capital": "Lleida",
+      "capitalReferenceAltitudeM": 131,
+      "bands": [
+        {
+          "zone": "C3",
+          "minM": null,
+          "maxM": 100
+        },
+        {
+          "zone": "D3",
+          "minM": 101,
+          "maxM": 600
+        },
+        {
+          "zone": "E1",
+          "minM": 601,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "27",
+      "name": "Lugo",
+      "capital": "Lugo",
+      "capitalReferenceAltitudeM": 412,
+      "bands": [
+        {
+          "zone": "D1",
+          "minM": null,
+          "maxM": 500
+        },
+        {
+          "zone": "E1",
+          "minM": 501,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "28",
+      "name": "Madrid",
+      "capital": "Madrid",
+      "capitalReferenceAltitudeM": 589,
+      "bands": [
+        {
+          "zone": "C3",
+          "minM": null,
+          "maxM": 500
+        },
+        {
+          "zone": "D3",
+          "minM": 501,
+          "maxM": 950
+        },
+        {
+          "zone": "D2",
+          "minM": 951,
+          "maxM": 1000
+        },
+        {
+          "zone": "E1",
+          "minM": 1001,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "29",
+      "name": "Málaga",
+      "capital": "Málaga",
+      "capitalReferenceAltitudeM": 0,
+      "bands": [
+        {
+          "zone": "A3",
+          "minM": null,
+          "maxM": 100
+        },
+        {
+          "zone": "B3",
+          "minM": 101,
+          "maxM": 300
+        },
+        {
+          "zone": "C3",
+          "minM": 301,
+          "maxM": 700
+        },
+        {
+          "zone": "D3",
+          "minM": 701,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "52",
+      "name": "Melilla",
+      "capital": "Melilla",
+      "capitalReferenceAltitudeM": 130,
+      "bands": [
+        {
+          "zone": "A3",
+          "minM": null,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "30",
+      "name": "Murcia",
+      "capital": "Murcia",
+      "capitalReferenceAltitudeM": 25,
+      "bands": [
+        {
+          "zone": "B3",
+          "minM": null,
+          "maxM": 100
+        },
+        {
+          "zone": "C3",
+          "minM": 101,
+          "maxM": 550
+        },
+        {
+          "zone": "D3",
+          "minM": 551,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "31",
+      "name": "Navarra",
+      "capital": "Pamplona/Iruña",
+      "capitalReferenceAltitudeM": 456,
+      "bands": [
+        {
+          "zone": "C2",
+          "minM": null,
+          "maxM": 100
+        },
+        {
+          "zone": "D2",
+          "minM": 101,
+          "maxM": 350
+        },
+        {
+          "zone": "D1",
+          "minM": 351,
+          "maxM": 600
+        },
+        {
+          "zone": "E1",
+          "minM": 601,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "32",
+      "name": "Ourense",
+      "capital": "Ourense",
+      "capitalReferenceAltitudeM": 327,
+      "bands": [
+        {
+          "zone": "C3",
+          "minM": null,
+          "maxM": 150
+        },
+        {
+          "zone": "C2",
+          "minM": 151,
+          "maxM": 300
+        },
+        {
+          "zone": "D2",
+          "minM": 301,
+          "maxM": 800
+        },
+        {
+          "zone": "E1",
+          "minM": 801,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "34",
+      "name": "Palencia",
+      "capital": "Palencia",
+      "capitalReferenceAltitudeM": 722,
+      "bands": [
+        {
+          "zone": "D1",
+          "minM": null,
+          "maxM": 800
+        },
+        {
+          "zone": "E1",
+          "minM": 801,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "36",
+      "name": "Pontevedra",
+      "capital": "Pontevedra",
+      "capitalReferenceAltitudeM": 77,
+      "bands": [
+        {
+          "zone": "C1",
+          "minM": null,
+          "maxM": 350
+        },
+        {
+          "zone": "D1",
+          "minM": 351,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "37",
+      "name": "Salamanca",
+      "capital": "Salamanca",
+      "capitalReferenceAltitudeM": 770,
+      "bands": [
+        {
+          "zone": "D2",
+          "minM": null,
+          "maxM": 850
+        },
+        {
+          "zone": "E1",
+          "minM": 851,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "38",
+      "name": "Santa Cruz de Tenerife",
+      "capital": "Santa Cruz de Tenerife",
+      "capitalReferenceAltitudeM": 0,
+      "bands": [
+        {
+          "zone": "α3",
+          "minM": null,
+          "maxM": 350
+        },
+        {
+          "zone": "A2",
+          "minM": 351,
+          "maxM": 750
+        },
+        {
+          "zone": "B2",
+          "minM": 751,
+          "maxM": 1000
+        },
+        {
+          "zone": "C2",
+          "minM": 1001,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "40",
+      "name": "Segovia",
+      "capital": "Segovia",
+      "capitalReferenceAltitudeM": 1013,
+      "bands": [
+        {
+          "zone": "D2",
+          "minM": null,
+          "maxM": 1050
+        },
+        {
+          "zone": "E1",
+          "minM": 1051,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "41",
+      "name": "Sevilla",
+      "capital": "Sevilla",
+      "capitalReferenceAltitudeM": 9,
+      "bands": [
+        {
+          "zone": "B4",
+          "minM": null,
+          "maxM": 200
+        },
+        {
+          "zone": "C4",
+          "minM": 201,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "42",
+      "name": "Soria",
+      "capital": "Soria",
+      "capitalReferenceAltitudeM": 984,
+      "bands": [
+        {
+          "zone": "D2",
+          "minM": null,
+          "maxM": 750
+        },
+        {
+          "zone": "D1",
+          "minM": 751,
+          "maxM": 800
+        },
+        {
+          "zone": "E1",
+          "minM": 801,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "43",
+      "name": "Tarragona",
+      "capital": "Tarragona",
+      "capitalReferenceAltitudeM": 1,
+      "bands": [
+        {
+          "zone": "B3",
+          "minM": null,
+          "maxM": 100
+        },
+        {
+          "zone": "C3",
+          "minM": 101,
+          "maxM": 500
+        },
+        {
+          "zone": "D3",
+          "minM": 501,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "44",
+      "name": "Teruel",
+      "capital": "Teruel",
+      "capitalReferenceAltitudeM": 995,
+      "bands": [
+        {
+          "zone": "C3",
+          "minM": null,
+          "maxM": 450
+        },
+        {
+          "zone": "C2",
+          "minM": 451,
+          "maxM": 500
+        },
+        {
+          "zone": "D2",
+          "minM": 501,
+          "maxM": 1000
+        },
+        {
+          "zone": "E1",
+          "minM": 1001,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "45",
+      "name": "Toledo",
+      "capital": "Toledo",
+      "capitalReferenceAltitudeM": 445,
+      "bands": [
+        {
+          "zone": "C4",
+          "minM": null,
+          "maxM": 500
+        },
+        {
+          "zone": "D3",
+          "minM": 501,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "46",
+      "name": "Valencia/València",
+      "capital": "València",
+      "capitalReferenceAltitudeM": 8,
+      "bands": [
+        {
+          "zone": "B3",
+          "minM": null,
+          "maxM": 50
+        },
+        {
+          "zone": "C3",
+          "minM": 51,
+          "maxM": 500
+        },
+        {
+          "zone": "D2",
+          "minM": 501,
+          "maxM": 950
+        },
+        {
+          "zone": "E1",
+          "minM": 951,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "47",
+      "name": "Valladolid",
+      "capital": "Valladolid",
+      "capitalReferenceAltitudeM": 704,
+      "bands": [
+        {
+          "zone": "D2",
+          "minM": null,
+          "maxM": 800
+        },
+        {
+          "zone": "E1",
+          "minM": 801,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "49",
+      "name": "Zamora",
+      "capital": "Zamora",
+      "capitalReferenceAltitudeM": 617,
+      "bands": [
+        {
+          "zone": "D2",
+          "minM": null,
+          "maxM": 800
+        },
+        {
+          "zone": "E1",
+          "minM": 801,
+          "maxM": null
+        }
+      ]
+    },
+    {
+      "ineCode": "50",
+      "name": "Zaragoza",
+      "capital": "Zaragoza",
+      "capitalReferenceAltitudeM": 207,
+      "bands": [
+        {
+          "zone": "C3",
+          "minM": null,
+          "maxM": 200
+        },
+        {
+          "zone": "D3",
+          "minM": 201,
+          "maxM": 650
+        },
+        {
+          "zone": "E1",
+          "minM": 651,
+          "maxM": null
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "document": "DB-HE consolidado (14 junio 2022, con la corrección de errores BOE 02/02/2023)",
+    "page": 46,
+    "verifiedOn": "2026-11-02",
+    "method": "Lectura de la geometría de la tabla del PDF (celdas combinadas y separadores de columna) y comparación de los 52 tramos de provincia con los datos de Arqtherm: coinciden todos."
+  }
+}

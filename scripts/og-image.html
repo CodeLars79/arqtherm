@@ -1,0 +1,57 @@
+<!doctype html>
+<!-- Fuente de public/og-image.png (1200×630). Renderizar con un navegador a 1200×630. -->
+<html lang="es"><head><meta charset="utf-8">
+<style>
+@font-face { font-family: 'Inter Variable'; src: url('../node_modules/@fontsource-variable/inter/files/inter-latin-wght-normal.woff2') format('woff2-variations'); font-weight: 100 900; }
+@font-face { font-family: 'Inter Variable'; src: url('../node_modules/@fontsource-variable/inter/files/inter-greek-wght-normal.woff2') format('woff2-variations'); font-weight: 100 900; unicode-range: U+0370-03FF; }
+* { box-sizing: border-box; margin: 0; }
+html, body { width: 1200px; height: 630px; }
+body { font-family: 'Inter Variable', sans-serif; background: #f6f6f4; color: #16181a; position: relative; overflow: hidden; }
+.grid { position: absolute; inset: 0; background-image: linear-gradient(#e9e9e4 1px, transparent 1px), linear-gradient(90deg, #e9e9e4 1px, transparent 1px); background-size: 40px 40px; opacity: .55; }
+.wrap { position: absolute; inset: 0; padding: 64px 72px; display: grid; grid-template-columns: 1.08fr 1fr; gap: 56px; align-items: center; }
+.brand { display: flex; align-items: center; gap: 14px; margin-bottom: 40px; }
+.mark { display: flex; gap: 3px; height: 34px; }
+.mark span { background: #1f5a6e; border-radius: 1.5px; }
+.mark span:nth-child(1) { width: 7px; opacity: .45 } .mark span:nth-child(2) { width: 13px } .mark span:nth-child(3) { width: 5px; opacity: .75 }
+.name { font-size: 34px; font-weight: 650; letter-spacing: -.02em; } .name em { font-style: normal; font-weight: 400; color: #5b5f64; }
+.eyebrow { font-size: 17px; font-weight: 600; letter-spacing: .14em; color: #1f5a6e; text-transform: uppercase; margin-bottom: 18px; }
+h1 { font-size: 58px; line-height: 1.04; letter-spacing: -.035em; font-weight: 700; }
+.sub { margin-top: 26px; font-size: 22px; line-height: 1.4; color: #5b5f64; max-width: 520px; }
+.card { background: #fff; border: 1px solid #e2e2dd; border-radius: 16px; padding: 30px; box-shadow: 0 20px 60px rgba(20,24,28,.10); }
+.axis { display: flex; justify-content: space-between; font-size: 13px; letter-spacing: .12em; color: #8a8e93; margin-bottom: 10px; }
+.bar { display: flex; height: 150px; border: 1px solid #c9c9c3; border-radius: 4px; overflow: hidden; }
+.bar div { height: 100%; }
+.l1 { flex: 15; background: #aeb0ab radial-gradient(#8f918c 1px, transparent 1.5px) 0 0/6px 6px; }
+.l2 { flex: 115; background: #c88d6e repeating-linear-gradient(45deg, transparent 0 9px, rgba(90,45,25,.28) 9px 10px); }
+.l3 { flex: 60; background: repeating-linear-gradient(45deg, transparent 0 7px, rgba(125,92,25,.42) 7px 8px), repeating-linear-gradient(-45deg, transparent 0 7px, rgba(125,92,25,.42) 7px 8px), #ecdc8f; }
+.l4 { flex: 20; background: #fff; border-left: 1px solid #c9c9c3; border-right: 1px solid #c9c9c3; }
+.l5 { flex: 70; background: #c88d6e repeating-linear-gradient(45deg, transparent 0 9px, rgba(90,45,25,.28) 9px 10px); }
+.l6 { flex: 15; background: #ecebe5; }
+.u { display: flex; align-items: baseline; gap: 14px; margin-top: 26px; }
+.u small { font-size: 22px; color: #5b5f64; font-weight: 500; }
+.u strong { font-size: 76px; letter-spacing: -.045em; font-weight: 650; line-height: 1; }
+.u span { font-size: 22px; color: #5b5f64; }
+.pills { display: flex; gap: 10px; margin-top: 18px; flex-wrap: wrap; }
+.pill { font-size: 16px; font-weight: 600; padding: 7px 13px; border-radius: 999px; }
+.ok { background: #ebf4ed; color: #2d6a3a; } .info { background: #e7eff1; color: #1f5a6e; }
+.foot { position: absolute; left: 72px; right: 72px; bottom: 34px; display: flex; justify-content: space-between; font-size: 17px; color: #8a8e93; }
+.accent { position: absolute; left: 0; top: 0; bottom: 0; width: 10px; background: #1f5a6e; }
+</style></head>
+<body>
+<div class="grid"></div><div class="accent"></div>
+<div class="wrap">
+  <div>
+    <div class="brand"><div class="mark"><span></span><span></span><span></span></div><div class="name">Arq<em>therm</em></div></div>
+    <p class="eyebrow">CTE DB-HE · Código abierto</p>
+    <h1>Calculadora de transmitancia térmica U</h1>
+    <p class="sub">Capa a capa según el DA DB-HE/1, con valores límite, Anejo E, zonas climáticas e informe PDF.</p>
+  </div>
+  <div class="card">
+    <div class="axis"><span>EXTERIOR</span><span>INTERIOR</span></div>
+    <div class="bar"><div class="l1"></div><div class="l2"></div><div class="l3"></div><div class="l4"></div><div class="l5"></div><div class="l6"></div></div>
+    <div class="u"><small>U</small><strong>0,395</strong><span>W/(m²·K)</span></div>
+    <div class="pills"><span class="pill ok">Cumple Ulim · zona C</span><span class="pill info">Fachada · 295 mm</span></div>
+  </div>
+</div>
+<div class="foot"><span>Gratuita · Sin registro · Datos en su navegador</span><span>por Lars Sørensen</span></div>
+</body></html>

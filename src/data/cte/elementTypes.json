@@ -1,0 +1,338 @@
+{
+  "datasetVersion": "2026.11.1",
+  "elementTypes": [
+    {
+      "id": "fachada",
+      "label": "Muro de fachada en contacto con el aire exterior",
+      "shortLabel": "Fachada",
+      "supported": true,
+      "surfaceResistanceKey": "exteriorHorizontalFlow",
+      "cavityOrientation": "vertical",
+      "allowVeryVentilated": true,
+      "method": "DA DB-HE/1, apartado 2.1.1 «Cerramientos en contacto con el aire exterior»",
+      "limit": {
+        "tableId": "HE1-3.1.1.a",
+        "rowId": "UM_US",
+        "symbol": "UM"
+      },
+      "orientative": {
+        "tableId": "HE-AnejoE",
+        "rowId": "UM_US",
+        "symbol": "UM"
+      },
+      "group": "exterior",
+      "calculationMethod": "layers"
+    },
+    {
+      "id": "cubierta",
+      "label": "Cubierta en contacto con el aire exterior (flujo ascendente)",
+      "shortLabel": "Cubierta",
+      "supported": true,
+      "surfaceResistanceKey": "exteriorUpwardFlow",
+      "cavityOrientation": "horizontal",
+      "allowVeryVentilated": true,
+      "method": "DA DB-HE/1, apartado 2.1.1 «Cerramientos en contacto con el aire exterior»",
+      "limit": {
+        "tableId": "HE1-3.1.1.a",
+        "rowId": "UC",
+        "symbol": "UC"
+      },
+      "orientative": {
+        "tableId": "HE-AnejoE",
+        "rowId": "UC",
+        "symbol": "UC"
+      },
+      "group": "exterior",
+      "calculationMethod": "layers"
+    },
+    {
+      "id": "suelo-exterior",
+      "label": "Suelo en contacto con el aire exterior (flujo descendente)",
+      "shortLabel": "Suelo exterior",
+      "supported": true,
+      "surfaceResistanceKey": "exteriorDownwardFlow",
+      "cavityOrientation": null,
+      "allowVeryVentilated": false,
+      "method": "DA DB-HE/1, apartado 2.1.1 «Cerramientos en contacto con el aire exterior»",
+      "limit": {
+        "tableId": "HE1-3.1.1.a",
+        "rowId": "UM_US",
+        "symbol": "US"
+      },
+      "orientative": {
+        "tableId": "HE-AnejoE",
+        "rowId": "UM_US",
+        "symbol": "US"
+      },
+      "group": "exterior",
+      "calculationMethod": "layers"
+    },
+    {
+      "id": "medianeria",
+      "label": "Medianería",
+      "shortLabel": "Medianería",
+      "supported": true,
+      "surfaceResistanceKey": "partyWall",
+      "cavityOrientation": "vertical",
+      "allowVeryVentilated": false,
+      "method": "DA DB-HE/1, apartado 2.1.1 (medianerías: resistencias superficiales interiores en ambas caras)",
+      "limit": {
+        "tableId": "HE1-3.1.1.a",
+        "rowId": "UT_UMD",
+        "symbol": "UMD"
+      },
+      "orientativeUnavailableReason": "La tabla a-Anejo E del DB-HE no incluye una fila para medianerías.",
+      "group": "interior",
+      "calculationMethod": "layers"
+    },
+    {
+      "id": "particion-vertical",
+      "label": "Partición interior vertical entre unidades de uso",
+      "shortLabel": "Partición vertical",
+      "supported": true,
+      "surfaceResistanceKey": "partitionHorizontalFlow",
+      "cavityOrientation": "vertical",
+      "allowVeryVentilated": false,
+      "method": "Capas homogéneas según DA DB-HE/1, apartado 2.1.1, con resistencias superficiales de la tabla 6",
+      "assumptions": [
+        "Se adoptan las resistencias superficiales de particiones interiores de la tabla 6 del DA DB-HE/1 para el cálculo de la partición."
+      ],
+      "contexts": [
+        {
+          "id": "same-use",
+          "label": "Entre unidades del mismo uso",
+          "limit": {
+            "tableId": "HE1-3.2",
+            "rowId": "PART_SAME_V",
+            "symbol": "Ulim"
+          }
+        },
+        {
+          "id": "other-use",
+          "label": "Entre unidades de distinto uso, o con zonas comunes",
+          "limit": {
+            "tableId": "HE1-3.2",
+            "rowId": "PART_OTHER",
+            "symbol": "Ulim"
+          }
+        }
+      ],
+      "orientativeUnavailableReason": "La tabla a-Anejo E del DB-HE no incluye particiones interiores entre unidades de uso.",
+      "group": "interior",
+      "calculationMethod": "layers"
+    },
+    {
+      "id": "particion-horizontal-ascendente",
+      "label": "Partición interior horizontal entre unidades de uso (flujo ascendente)",
+      "shortLabel": "Partición horizontal ↑",
+      "supported": true,
+      "surfaceResistanceKey": "partitionUpwardFlow",
+      "cavityOrientation": "horizontal",
+      "allowVeryVentilated": false,
+      "method": "Capas homogéneas según DA DB-HE/1, apartado 2.1.1, con resistencias superficiales de la tabla 6",
+      "assumptions": [
+        "Se adoptan las resistencias superficiales de particiones interiores de la tabla 6 del DA DB-HE/1 para el cálculo de la partición."
+      ],
+      "contexts": [
+        {
+          "id": "same-use",
+          "label": "Entre unidades del mismo uso",
+          "limit": {
+            "tableId": "HE1-3.2",
+            "rowId": "PART_SAME_H",
+            "symbol": "Ulim"
+          }
+        },
+        {
+          "id": "other-use",
+          "label": "Entre unidades de distinto uso, o con zonas comunes",
+          "limit": {
+            "tableId": "HE1-3.2",
+            "rowId": "PART_OTHER",
+            "symbol": "Ulim"
+          }
+        }
+      ],
+      "orientativeUnavailableReason": "La tabla a-Anejo E del DB-HE no incluye particiones interiores entre unidades de uso.",
+      "group": "interior",
+      "calculationMethod": "layers"
+    },
+    {
+      "id": "particion-horizontal-descendente",
+      "label": "Partición interior horizontal entre unidades de uso (flujo descendente)",
+      "shortLabel": "Partición horizontal ↓",
+      "supported": true,
+      "surfaceResistanceKey": "partitionDownwardFlow",
+      "cavityOrientation": null,
+      "allowVeryVentilated": false,
+      "method": "Capas homogéneas según DA DB-HE/1, apartado 2.1.1, con resistencias superficiales de la tabla 6",
+      "assumptions": [
+        "Se adoptan las resistencias superficiales de particiones interiores de la tabla 6 del DA DB-HE/1 para el cálculo de la partición."
+      ],
+      "contexts": [
+        {
+          "id": "same-use",
+          "label": "Entre unidades del mismo uso",
+          "limit": {
+            "tableId": "HE1-3.2",
+            "rowId": "PART_SAME_H",
+            "symbol": "Ulim"
+          }
+        },
+        {
+          "id": "other-use",
+          "label": "Entre unidades de distinto uso, o con zonas comunes",
+          "limit": {
+            "tableId": "HE1-3.2",
+            "rowId": "PART_OTHER",
+            "symbol": "Ulim"
+          }
+        }
+      ],
+      "orientativeUnavailableReason": "La tabla a-Anejo E del DB-HE no incluye particiones interiores entre unidades de uso.",
+      "group": "interior",
+      "calculationMethod": "layers"
+    },
+    {
+      "id": "suelo-terreno",
+      "group": "ground",
+      "label": "Solera o losa en contacto con el terreno",
+      "shortLabel": "Solera sobre terreno",
+      "supported": true,
+      "calculationMethod": "ground-slab",
+      "surfaceResistanceKey": null,
+      "cavityOrientation": null,
+      "allowVeryVentilated": false,
+      "method": "DA DB-HE/1, apartado 2.1.2.1 «Suelos en contacto con el terreno» (tablas 3 y 4)",
+      "limit": {
+        "tableId": "HE1-3.1.1.a",
+        "rowId": "UT_UMD",
+        "symbol": "UT"
+      },
+      "orientative": {
+        "tableId": "HE-AnejoE",
+        "rowId": "UT",
+        "symbol": "UT"
+      }
+    },
+    {
+      "id": "muro-terreno",
+      "group": "ground",
+      "label": "Muro en contacto con el terreno",
+      "shortLabel": "Muro enterrado",
+      "supported": true,
+      "calculationMethod": "ground-wall",
+      "surfaceResistanceKey": null,
+      "cavityOrientation": "vertical",
+      "allowVeryVentilated": false,
+      "method": "DA DB-HE/1, apartado 2.1.2.2 «Muros en contacto con el terreno» (tabla 5)",
+      "limit": {
+        "tableId": "HE1-3.1.1.a",
+        "rowId": "UT_UMD",
+        "symbol": "UT"
+      },
+      "orientative": {
+        "tableId": "HE-AnejoE",
+        "rowId": "UT",
+        "symbol": "UT"
+      }
+    },
+    {
+      "id": "cubierta-enterrada",
+      "group": "ground",
+      "label": "Cubierta enterrada",
+      "shortLabel": "Cubierta enterrada",
+      "supported": true,
+      "calculationMethod": "buried-roof",
+      "surfaceResistanceKey": "exteriorUpwardFlow",
+      "cavityOrientation": "horizontal",
+      "allowVeryVentilated": false,
+      "method": "DA DB-HE/1, apartado 2.1.2.3 «Cubiertas enterradas» (procedimiento 2.1.1 con el terreno como capa de λ = 2 W/(m·K))",
+      "limit": {
+        "tableId": "HE1-3.1.1.a",
+        "rowId": "UT_UMD",
+        "symbol": "UT"
+      },
+      "orientative": {
+        "tableId": "HE-AnejoE",
+        "rowId": "UT",
+        "symbol": "UT"
+      }
+    },
+    {
+      "id": "suelo-camara-sanitaria",
+      "group": "unheated",
+      "label": "Suelo sobre cámara sanitaria",
+      "shortLabel": "Suelo sobre cámara sanitaria",
+      "supported": true,
+      "calculationMethod": "crawl-space",
+      "surfaceResistanceKey": null,
+      "cavityOrientation": null,
+      "allowVeryVentilated": false,
+      "method": "DA DB-HE/1, apartado 2.1.3.2 «Suelos en contacto con cámaras sanitarias» (tabla 9)",
+      "limit": {
+        "tableId": "HE1-3.1.1.a",
+        "rowId": "UT_UMD",
+        "symbol": "UT"
+      },
+      "orientative": {
+        "tableId": "HE-AnejoE",
+        "rowId": "UT",
+        "symbol": "UT"
+      }
+    },
+    {
+      "id": "no-habitable",
+      "group": "unheated",
+      "label": "Partición en contacto con un espacio no habitable",
+      "shortLabel": "Espacio no habitable",
+      "supported": true,
+      "calculationMethod": "unheated-space",
+      "surfaceResistanceKey": "partitionHorizontalFlow",
+      "cavityOrientation": "vertical",
+      "allowVeryVentilated": false,
+      "method": "DA DB-HE/1, apartado 2.1.3.1: U = Up · b (tablas 6, 7 y 8)",
+      "limit": {
+        "tableId": "HE1-3.1.1.a",
+        "rowId": "UT_UMD",
+        "symbol": "UT"
+      },
+      "orientative": {
+        "tableId": "HE-AnejoE",
+        "rowId": "UT",
+        "symbol": "UT"
+      }
+    },
+    {
+      "id": "hueco",
+      "label": "Huecos (ventanas, lucernarios, puertas)",
+      "shortLabel": "Hueco",
+      "supported": false,
+      "unsupportedReason": "La transmitancia de huecos se calcula según UNE-EN ISO 10077 (DA DB-HE/1, apartado 2.1.4), no por capas. No implementado en esta versión.",
+      "group": "unsupported",
+      "calculationMethod": null
+    }
+  ],
+  "groups": [
+    {
+      "id": "exterior",
+      "label": "En contacto con el aire exterior"
+    },
+    {
+      "id": "interior",
+      "label": "Medianerías y particiones interiores"
+    },
+    {
+      "id": "ground",
+      "label": "En contacto con el terreno"
+    },
+    {
+      "id": "unheated",
+      "label": "En contacto con espacios no habitables"
+    },
+    {
+      "id": "unsupported",
+      "label": "No soportados en esta versión"
+    }
+  ]
+}
